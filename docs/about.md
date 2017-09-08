@@ -99,13 +99,12 @@ a {
 
 ---
 
-#Some more stuff about me!
 permalink: /about
 
 ---
 <h1> Here's a pretty short bio.</h1>
 
-<h3>
+<h2>
 Data journalist and political correspondent at the European Institutions, expert on European economic affairs and financial matters, with a proven track record in business consulting. Recently completed Columbia University’s Lede program to teach coding to journalists. Able to investigate, extract and analyze stories using large datasets and visualizations.
 
 Now working on learning programming and coding in order to use data as a means for conveying stories. 
