@@ -5,4 +5,4 @@ title: Contact me
 ---
 
 * [Twitter](https://twitter.com/IoannisAntypas)
-* [user@example.com](mailto:antypas.ioannis@gmail.com)
+* [If you wish to email me just click here!](mailto:antypas.ioannis@gmail.com)
