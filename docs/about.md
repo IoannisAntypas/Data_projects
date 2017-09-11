@@ -48,8 +48,10 @@ a {
 }
 #my_header {
   text-align: left;
-  margin-left: 25%;
-  margin-right: 20%;
+    font-family: 'Inconsolata', monospace,
+
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 5%;
   font-size: 31px;
   color: black;
@@ -61,7 +63,7 @@ a {
   font-family: 'Inconsolata', monospace,
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 5%;
+  margin-top: 20%;
   font-size: 20px;
   color: black;
   font-weight: bolder;
