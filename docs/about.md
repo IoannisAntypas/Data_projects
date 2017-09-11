@@ -113,30 +113,56 @@ Now working on learning programming and coding in order to use data as a means f
 <li>
 
 Working with: 
+</li>
+<li>
 
 Python
+</li>
+<li>
 
 Data Scraping
+</li>
+<li>
 
 Mapping with Leaflet
+</li>
+<li>
 
 SQL
+</li>
+<li>
 
 Selenium 
+</li>
+<li>
 
 Basic HTML
+</li>
+<li>
 
 Python Pandas
+</li>
+<li>
 
 Regular Expressions
+</li>
+<li>
 
 Working with PDF, TXT, and CSV files
+</li>
+<li>
 
 Scikit-learn: Machine Learning in Python
+</li>
+<li>
 
 Leaflet 
+</li>
+<li>
 
 OpenRefine 
+</li>
+<li>
 
 basic Gephi knowledge
 </li>
