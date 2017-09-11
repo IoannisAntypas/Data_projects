@@ -57,7 +57,7 @@ a {
 }
 
 #something_like_a_header {
-  text-align: left;
+  text-align: center;
   margin-left: 10%;
   margin-right: 60%;
   margin-top: 5%;
@@ -109,7 +109,6 @@ a {
 
 ---
 <div id="my_header">Here's a pretty short bio of me.</div>
-
 <!-- permalink: /about
  -->
 ---
