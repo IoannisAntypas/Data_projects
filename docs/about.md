@@ -179,3 +179,9 @@ OpenRefine
 basic Gephi knowledge
 </li>
 
+
+<div>
+<img src="Ioannis Antypas_CV-1.png" alt="">
+</div>
+
+
