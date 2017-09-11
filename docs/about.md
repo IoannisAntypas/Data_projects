@@ -57,7 +57,7 @@ a {
 }
 
 #something_like_a_header {
-  text-align: center;
+  text-align: left;
   font-family: 'Inconsolata', monospace,
   margin-left: 10%;
   margin-right: 10%;
