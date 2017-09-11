@@ -98,11 +98,11 @@ a {
 </style>
 
 ---
+<div id="my_header">Here's a pretty short bio of me.</div>
 
 <!-- permalink: /about
  -->
 ---
-<div id="my_header">Here's a pretty short bio of me.</div>
 
 
 <div id="my_another_subheader">
@@ -110,7 +110,7 @@ Data journalist and political correspondent at the European Institutions, expert
 
 Now working on learning programming and coding in order to use data as a means for conveying stories. 
 </div>
-<div id="my_another_subheader">
+<h3>
 
 Working with: 
 
@@ -139,5 +139,6 @@ Leaflet
 OpenRefine 
 
 basic Gephi knowledge
+</h3>
 </div>
 
