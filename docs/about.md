@@ -110,10 +110,10 @@ Data journalist and political correspondent at the European Institutions, expert
 
 Now working on learning programming and coding in order to use data as a means for conveying stories. 
 </div>
-<li>
+<h1>
 
 Working with: 
-</li>
+</h1>
 <li>
 
 Python
