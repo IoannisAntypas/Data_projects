@@ -99,15 +99,18 @@ a {
 
 ---
 
-permalink: /about
-
+<!-- permalink: /about
+ -->
 ---
-<h1> Here's a pretty short bio.</h1>
+<div id="my_header">Here's a pretty short bio of me.</div>
 
-<h2>
+
+<div id="my_another_subheader">
 Data journalist and political correspondent at the European Institutions, expert on European economic affairs and financial matters, with a proven track record in business consulting. Recently completed Columbia University’s Lede program to teach coding to journalists. Able to investigate, extract and analyze stories using large datasets and visualizations.
 
 Now working on learning programming and coding in order to use data as a means for conveying stories. 
+</div>
+<div id="my_another_subheader">
 
 Working with: 
 
@@ -123,9 +126,18 @@ Selenium
 
 Basic HTML
 
-Pandas
+Python Pandas
 
 Regular Expressions
 
 Working with PDF, TXT, and CSV files
-</h3>
+
+Scikit-learn: Machine Learning in Python
+
+Leaflet 
+
+OpenRefine 
+
+basic Gephi knowledge
+</div>
+
