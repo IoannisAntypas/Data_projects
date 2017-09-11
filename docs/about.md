@@ -60,7 +60,7 @@ a {
   text-align: center;
   font-family: 'Inconsolata', monospace,
   margin-left: 10%;
-  margin-right: 60%;
+  margin-right: 10%;
   margin-top: 5%;
   font-size: 20px;
   color: black;
