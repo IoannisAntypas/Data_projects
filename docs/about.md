@@ -130,58 +130,58 @@ Now working on learning programming and coding in order to use data as a means f
 Working with: 
 </h2>
 
-<div id="something_like_a_header">
+<li>
 
 Python
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Data Scraping
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Mapping with Leaflet
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 SQL
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Selenium 
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Basic HTML
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Python Pandas
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Regular Expressions
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Working with PDF, TXT, and CSV files
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Scikit-learn: Machine Learning in Python
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 Leaflet 
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 OpenRefine 
-</div>
-<div id="something_like_a_header">
+</li>
+<li>
 
 basic Gephi knowledge
-</div>
+</li>
 
 <!-- 
 <div>
