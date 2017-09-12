@@ -121,13 +121,13 @@ a {
 </style>
 
 ---
-<div id="my_header">Here's a pretty short bio of me.</div>
+<div id="my_header2">Here's a pretty short bio of me.</div>
 <!-- permalink: /about
  -->
 ---
 
 
-<div id="something_like_a_header2">
+<!-- <div id="something_like_a_header">
 Data journalist and political correspondent at the European Institutions, expert on European economic affairs and financial matters, with a proven track record in business consulting. Recently completed Columbia University’s Lede program to teach coding to journalists. Able to investigate, extract and analyze stories using large datasets and visualizations.
 
 Now working on learning programming and coding in order to use data as a means for conveying stories. 
@@ -190,7 +190,7 @@ OpenRefine
 
 basic Gephi knowledge
 </li>
-
+ -->
 
 <div>
 <img src="Ioannis Antypas_CV-1.png" alt="">
