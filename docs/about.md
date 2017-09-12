@@ -193,7 +193,7 @@ basic Gephi knowledge
  -->
 
 <div>
-<img src="Ioannis Antypas_CV-1.png" alt="">
+<img width="70%" height="70" src="Ioannis Antypas_CV-1.png" alt="">
 </div>
 
 
