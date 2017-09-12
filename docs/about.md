@@ -68,16 +68,6 @@ a {
   color: black;
   font-weight: bolder;
 }
-#something_like_a_header2 {
-  text-align: left;
-  font-family: 'Inconsolata', monospace,
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 20%;
-  font-size: 35px;
-  color: black;
-  font-weight: bolder;
-}
 #my_subheader {
   text-align: left;
   margin-left: 25%;
@@ -127,7 +117,7 @@ a {
 ---
 
 
-<!-- <div id="something_like_a_header">
+<div id="something_like_a_header">
 Data journalist and political correspondent at the European Institutions, expert on European economic affairs and financial matters, with a proven track record in business consulting. Recently completed Columbia University’s Lede program to teach coding to journalists. Able to investigate, extract and analyze stories using large datasets and visualizations.
 
 Now working on learning programming and coding in order to use data as a means for conveying stories. 
@@ -190,10 +180,10 @@ OpenRefine
 
 basic Gephi knowledge
 </li>
- -->
 
+<!-- 
 <div>
-<img width="30%" height="50" src="Ioannis Antypas_CV-1.png" alt="">
+<img width="20%" height="40" src="Ioannis Antypas_CV-1.png" alt="">
 </div>
 
-
+ -->
