@@ -121,7 +121,7 @@ a {
 </style>
 
 ---
-<div id="my_header2">Here's a pretty short bio of me.</div>
+<div id="my_header">Here's a pretty short bio of me.</div>
 <!-- permalink: /about
  -->
 ---
@@ -193,7 +193,7 @@ basic Gephi knowledge
  -->
 
 <div>
-<img width="70%" height="70" src="Ioannis Antypas_CV-1.png" alt="">
+<img width="30%" height="50" src="Ioannis Antypas_CV-1.png" alt="">
 </div>
 
 
