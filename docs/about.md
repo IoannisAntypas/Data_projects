@@ -111,8 +111,8 @@ a {
 </style>
 
 ---
-layout: default
-<div id="my_header">Here's a pretty short bio of me.</div>
+<!-- layout: default
+ --><div id="my_header">Here's a pretty short bio of me.</div>
 
 <!-- permalink: /about
  -->
