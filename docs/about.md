@@ -63,7 +63,7 @@ a {
   font-family: 'Inconsolata', monospace,
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 20%;
+  margin-top: 8%;
   font-size: 20px;
   color: black;
   font-weight: bolder;
@@ -130,58 +130,58 @@ Now working on learning programming and coding in order to use data as a means f
 Working with: 
 </h2>
 
-<li>
+<div id="something_like_a_header">
 
 Python
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Data Scraping
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Mapping with Leaflet
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 SQL
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Selenium 
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Basic HTML
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Python Pandas
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Regular Expressions
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Working with PDF, TXT, and CSV files
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Scikit-learn: Machine Learning in Python
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 Leaflet 
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 OpenRefine 
-</li>
-<li>
+</div>
+<div id="something_like_a_header">
 
 basic Gephi knowledge
-</li>
+</div>
 
 <!-- 
 <div>
