@@ -11,3 +11,5 @@ I am a data journalist from Athens, Greece, living in Brussels, and reporting on
 * [More persons than ever involved in British financial lobbies.]({{ site.url }}/Brexit_lobbying)
 * [Are we seriously facing the return of extinct diseases?]({{ site.url }}/Anti_vaxinations_a_ticking_time_bomb/)
 * [Did you know Eurovision (yes that contest) is a playground of data?]({{ site.url }}/Eurovision_map)
+* [Apparently the Eurogroup is not the most sentimental place.]({{ site.url }}/sentiment_analysis)
+
