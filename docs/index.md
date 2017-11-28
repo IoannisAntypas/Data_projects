@@ -12,4 +12,4 @@ I am a data journalist from Athens, Greece, living in Brussels, and reporting on
 * [Are we seriously facing the return of extinct diseases?]({{ site.url }}/Anti_vaxinations_a_ticking_time_bomb/)
 * [Did you know Eurovision (yes that contest) is a playground of data?]({{ site.url }}/Eurovision_map)
 * [Apparently the Eurogroup is not the most sentimental place.]({{ site.url }}/sentiment_analysis)
-* [Poverty in Greek children grew more than in any other EU country.](Might be all Greek to you)]({{http://www.protothema.gr/greece/article/736025/eurostat-ragdaia-auxisi-tis-paidiki-ftoheias-stin-ellada- }}
+* [Poverty in Greek children grew more than in any other EU country.(Might be all Greek to you)]({{{http://www.protothema.gr/greece/article/736025/eurostat-ragdaia-auxisi-tis-paidiki-ftoheias-stin-ellada- }})
