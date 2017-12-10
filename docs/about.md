@@ -1,4 +1,6 @@
-<a href="/Users/ioannisantypas/Desktop/programming/data-studios/Data_projects/docs/Ioannis Antypas_CV-3.pdf">Link Text Here</a>
+<div>
+<img src="Ioannis Antypas_CV-3.pdf" alt="">
+</div>
 
 <!-- 
 <style>
