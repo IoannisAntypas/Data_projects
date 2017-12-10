@@ -1,4 +1,6 @@
+<a href="/Users/ioannisantypas/Desktop/programming/data-studios/Data_projects/docs/Ioannis Antypas_CV-3.pdf">Link Text Here</a>
 
+<!-- 
 <style>
 .container {
   text-align: center;
@@ -188,4 +190,5 @@ basic Gephi knowledge
 <img width="20%" height="40" src="Ioannis Antypas_CV-1.png" alt="">
 </div>
 
+ -->
  -->
