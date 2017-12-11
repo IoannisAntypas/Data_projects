@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
   padding-bottom: 60px;
   padding-top: 60px;
-  font-family: 'Calibri';
+  font-family: 'Bree Serif', serif;
   position: relative;
 }
 
@@ -34,7 +34,7 @@ body {
 #profile_pic {
     width: 130px;
     height: 130px;
-    margin-top: 40px;
+    margin-top: 20px;
     position: relative;
     left:50%;
     margin-left: -70px;
@@ -99,7 +99,8 @@ p {
 }
 
 p.italic {
-  font-style: italic;
+  font-style: italic
+  font-style: bold;
 }
 
 #portfolio {
@@ -114,7 +115,7 @@ p.italic {
 }
 
 .page-header {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bree Serif', serif;
     font-size: 24px;
     font-weight: 700;
     border-bottom: none;
@@ -144,5 +145,5 @@ li:nth-child(even) {
   font-size: 13px;
   line-height: 1.5;
   margin: 0.35em;
-  font-family: georgia italic;
+  font-family: 'Bree Serif';
 }
