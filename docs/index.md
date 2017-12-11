@@ -3,7 +3,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
-  <title>Chen Wang</title>
+  <title>Ioannis Antypas</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,12 +54,6 @@
           <p class="tools">Tools: Python, d3.js, web scrapping, Adobe Illustrator</p>
           <p class="tools">Oct. 25, 2017</p>
       </li>
-      <!-- <li id='california_bus'>
-          <img class="portfolio_pic" src="assets/project_photo/project_5.png">
-          <p class="headline"><a href="project_5_california_bus/california_bus.html">Public Transportation Underserved Counties in California</a></p>
-          <p class="tools">Tools: ArcGIS</p>
-          <p class="tools">Oct. 3, 2017</p>
-      </li> -->
       <li id='Eurogroup'>
           <img class="portfolio_pic" src="assets/project_photo/4.png">
           <p class="headline"><a href="https://ioannisantypas.github.io/Data_projects/sentiment_analysis/">It appears there is no room for sentimentality in the Eurogroup!</a></p>
