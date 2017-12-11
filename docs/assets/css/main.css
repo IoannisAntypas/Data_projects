@@ -1,43 +1,148 @@
+body {
+    height: 100%;
+    width:100%;
+}
 
-.container {
+#container {
   width: 750px;
   color: #333;
   margin: 0 auto;
   padding-bottom: 60px;
   padding-top: 60px;
-  font-family: Georgia, sans-serif;
+  font-family: 'Bree Serif', serif;
   position: relative;
 }
 
 #nav {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 15px;
   text-align: right;
   width: 100%;
+  padding-right: 3px;
 }
 
-h1 {
-  font-size: 54px;
+#nav a{
+  padding-right: 5px;
 }
 
-h2 {
-  font-size: 32px;
+.intro {
+  display: block;
+  clear
 }
 
-p {
-  font-size: 24px;
-  line-height: 1.8;
+#profile_pic {
+    width: 130px;
+    height: 130px;
+    margin-top: 40px;
+    position: relative;
+    left:50%;
+    margin-left: -70px;
+    border-radius: 50%;
 }
 
-li {
-  font-size: 24px;
-  line-height: 1.8;
+.text-center {
+    text-align: center;
+    float: none;
+}
+
+.header{
+    margin-top: 50px;
+}
+
+.intro_text {
+    font-size: 15px;
+    line-height: 25px;
 }
 
 a {
+    background-color: #ffffff;
+    border-bottom: 2px solid #b4e7f8 !important;
+}
+
+a:hover, a:active{
+    background-color: #b4e7f8;
+    border-bottom: 2px solid #b4e7f8 !important;
+}
+
+#buttons {
+  top: 195px;
+  right: 5px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+
+#buttons img{
+  width: 25px;
+  height: 25px;
+  display: inline;
+  margin: 10px 5px 2px;
+  padding-right: 5px;
+}
+
+#buttons a:link, a:hover, a:active{
+  background: #ffffff;
   text-decoration: none;
-  background: #bdffc5;
-  padding: 3px 6px;
-  color: #000;
+}
+
+h1 {
+  margin: 0 0 0;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0.35em;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+#portfolio {
+    max-width: none;
+    margin-top: 50px;
+}
+
+.portfolio_pic {
+  width: 348px;
+  height: 230px;
+  border: 1px solid #ccc;
+}
+
+.page-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: none;
+}
+
+ul {
+    width: 750px;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    width: 350px;
+    margin: 50px 42px 0 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2.0;
+    vertical-align: top;
+}
+
+li:nth-child(even) {
+    margin-right: 0;
+}
+
+.tools {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0.35em;
+  font-family: georgia italic;
 }
