@@ -77,19 +77,34 @@ a:hover, a:active{
 
 #buttons {
   top: 195px;
+  right: -25px;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+#buttons_second {
+  top: 195px;
   right: 5px;
   width: 100%;
   height: 25px;
   text-align: center;
 }
 
+
 #buttons img{
   width: 35px;
   height: 35px;
-  display: inline;
   margin: 10px 5px 2px;
   padding-right: 5px;
 }
+#buttons_second img{
+  width: 45px;
+  height: 45px;
+  margin: -20px 5px 2px 202px;
+  padding-right: 5px;
+
+}
+
 
 #buttons a:link, a:hover, a:active{
   background: #ffffff;
