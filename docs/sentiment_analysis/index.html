@@ -113,15 +113,15 @@ a {
   color: #000;
 }
 </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 </head>
 
 <body>
 <div class="container">
       <div id="nav">
-        <a href="https://ioannisantypas.github.io/Data_projects/">Home</a>
-        <a href="https://ioannisantypas.github.io/Data_projects//contact">Contact</a>
-        <a href="https://ioannisantypas.github.io/Data_projects/about">About</a>
+        <a class="btn btn-primary btn-sm" href="https://ioannisantypas.github.io/Data_projects/">Home</a>
+        <a class="btn btn-secondary btn-sm" href="assets/CV.pdf">Resume</a>
       </div>
 
 <div>
@@ -202,9 +202,7 @@ We measure just how much emotion is shown by the heads of the Eurozone when it c
 
 <p>Sentiment analysis, is not perfect. It has a long way ahead of it. It does however serve as a means of investigation and research. The Washington Post has relied on it to analyse the sentiments shown by President Trump in the past. However, in our case it measure neither what happend when the doors closed and the Eurogroup discussions begun in earnest, nor the underlying messages sent by slight nuanses by each politician.</p
 
-
-<div id="my_footer">After finding all Greek related speeches by each poltician, we used sklearn in conjuction with Python to tokenize and analyse their text. The TfidfVectorizer broke down each text and assigned scores in each word, resulting in an oversal sentiment score for each speech. We then visualized it using matplotlib and adobe illustrator.</div>
-<!-- 
-<p>To determine the size and scope of lobbying from each country, we calculated the sum of persons involved in each organization registered in the transparency register. We then isolated those organizations which list finance in their interests and measured them for each country.</p>
- -->
-
+</div>
+<div id="my_footer"> After finding all Greek related speeches by each poltician, we used the machine learning library of Python -scikit-learn- to tokenize and analyse their text. The TfidfVectorizer broke down each text and assigned scores in each word, resulting in an oversal sentiment score for each speech. We then visualized it using matplotlib and adobe illustrator.</div>
+</body>
+</html>
