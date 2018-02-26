@@ -29,13 +29,15 @@ body {
 .intro {
   font-family: 'Calibri', serif;
   display: block;
+  text-align: left;
   clear
 }
 
 .intro p{
   font-family: 'Calibri', serif;
   display: block;
-  font-size: 16px;
+  text-align: left;
+  font-size: 15px;
   clear
 
 }
@@ -62,6 +64,8 @@ body {
 .intro_text {
     font-size: 15px;
     line-height: 25px;
+    text-align: center;
+
 }
 
 /*a {
