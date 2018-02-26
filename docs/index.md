@@ -8,9 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ioannis Antypas - Portfolio">
-  <meta name="keywords" content="Ioannis Antypas, Journalism, Data, Visualization, Graphics, Brussels">
+  <meta name="keywords" content="Ioannis Antypas, Journalism, Data, Data Visualization, Graphics, Brussels">
   <meta name="author" content="Ioannis Antypas">
   <meta property="og:image" content="assets/Preview_Thumbnail.png">
+  
 </head>
 
 <body>
@@ -42,6 +43,13 @@
   </div>
   <div id="portfolio">
     <ul>
+      <li id='EU Lobbying'>
+        <img class="portfolio_pic" src="assets/project_photo/8.png">
+        <p class="headline"><a href="https://www.politico.eu/article/transparency-register-analysis-lobbying-east-west-skew-european-union/"> Politico.eu - EU lobbying has never been bigger, and the divide between east and west is astonishing</a></p>
+        <p class="tools">Tools: Python, d3.js web scraping</p>
+        <p class="tools">Dec. 15, 2017</p>
+      </li>
+
     <li id='Taxes'>
           <img class="portfolio_pic" src="assets/project_photo/6.png">
           <p class="headline"><a href="http://www.protothema.gr/economy/article/740010/eurostat-protathlitria-i-ellada-stin-auxisi-tis-forologisis/"> Taxes in crisis striken Greece rise higher than any other EU country.</a></p>
