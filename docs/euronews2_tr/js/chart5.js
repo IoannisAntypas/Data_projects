@@ -287,7 +287,7 @@ var bubbleStroke = d3.scaleOrdinal()
 
 var forceXSeperate = d3.forceX(function(d) {
     if(d.Humanitarian === "1") {
-        return 250
+        return 280
     } else {
         return 750
     }
