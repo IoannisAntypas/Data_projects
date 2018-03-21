@@ -12,23 +12,6 @@
         .attr("transform", "translate(0,-50)")
 
 
-    var split = d3.select('#splitter')
-        .append('split')
-        .attr('height','20')
-        .attr('width','780')
-        .append('g')
-        .attr("transform", "translate(0,0)")
-
-    split.append('line')
-        .attr("y1", 0)
-        .attr("x2", 20)
-        .attr("y2", 0)
-        .attr('x2',800)
-        .attr('visibility','visible')
-        .attr("stroke-width", 3)
-        .attr("stroke", "black")
-        .style("stroke-dasharray", ("3,3"))
-        .style("opacity", 1)
 
 
    var non_humanitarian_text = svg.append("text")
@@ -236,17 +219,21 @@
                     .style("font-weight", "normal")
 
 
+     svg.append("text")
+        .attr("x", width/2 - 470)
+        .attr("y", height/2 + 200)
+        .attr("font-family", "Arial")
+        .attr("font-size",12)
+        .text("graphics by @IoannisAntypas")
+        .style("font-weight", "normal")
+        .style('fill','grey')
+        .style('text-decoration', 'underline')
+        .on("mouseover", function(d) {
+        d3.select(this).style("cursor", "pointer")}) 
+        .on("mouseout", function(d) {
+        d3.select(this).style("cursor", "default")})
+        .on("click", function() { window.open("https://twitter.com/IoannisAntypas"); });
 
-    // var explanation = svg.append("text")
-    //     .attr("class",'disappearing_text')
-    //     .attr('fill', 'black')
-    //     .attr('stroke','none')
-    //     .attr("x", 30)
-    //     .attr("y", 55)
-    //     .attr('visibility', 'visible')
-    //     .attr("font-family", "Arial")
-    //     .attr("font-size", 15)
-    //     .text("Humanitarian Projects")
 
 
 var flag = true

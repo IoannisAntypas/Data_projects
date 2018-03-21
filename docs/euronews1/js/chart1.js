@@ -80,6 +80,22 @@ d3.csv("data/total_spending.csv", function(data){
     update(data);
 });
 
+     g.append("text")
+        .attr("x", width/2 - 200)
+        .attr("y", height/2 + 270)
+        .attr("font-family", "Arial")
+        .attr("font-size",12)
+        .text("graphics by @IoannisAntypas")
+        .style("font-weight", "normal")
+        .style('fill','grey')
+        .style('text-decoration', 'underline')
+        .on("mouseover", function(d) {
+        d3.select(this).style("cursor", "pointer")}) 
+        .on("mouseout", function(d) {
+        d3.select(this).style("cursor", "default")})
+        .on("click", function() { window.open("https://twitter.com/IoannisAntypas"); });
+
+
 function update(data) {
     var value = flag ? "Amount Contracted in €" : "Net payments made to projects in €";
 
@@ -112,7 +128,7 @@ function update(data) {
     // ENTER new elements present in new data...
     rects.enter()
         .append("rect")
-            .attr("fill", "gray")
+            .attr("fill", "#17448A")
             .attr("class", "bar")
             .attr("y", y(0))
             .attr("height", 0)
