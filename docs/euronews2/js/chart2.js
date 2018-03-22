@@ -294,6 +294,24 @@ var forceXSeperate = d3.forceX(function(d) {
     }
     }).strength(0.03)
 
+var forceXSeperate_tr = d3.forceX(function(d) {
+    if(d.Turkish === "turkey_flag1.png") {
+        return 750
+    } else {
+        return 250
+    }
+    }).strength(0.03)
+
+var forceXSeperate_edu = d3.forceX(function(d) {
+    if(d.instrument === "education") {
+        return 250
+    } else {
+        return 750
+    }
+    }).strength(0.03)
+
+
+
 var forceXCombine = d3.forceX(750).strength(0.02)
 
 
@@ -378,6 +396,66 @@ var stroke_color = function(d) {
 
    
         })
+
+        d3.select("#turkish").on('click', function(d){
+            simulation
+                .force('x', forceXSeperate_tr)
+                .alphaTarget(0.6)
+                .restart()
+                humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
+                non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
+                legend1.style("visibility", "hidden").enter(legend1)
+                legend2.style("visibility", "hidden").enter(legend2)
+                legend3.style("visibility", "hidden").enter(legend3)
+                legend4.style("visibility", "hidden").enter(legend4)
+                legend5.style("visibility", "hidden").enter(legend5)
+                legend6.style("visibility", "hidden").enter(legend6)
+                legend7.style("visibility", "hidden").enter(legend7)
+                legend8.style("visibility", "hidden").enter(legend8)
+                legend9.style("visibility", "hidden").enter(legend9)
+                legend10.style("visibility", "hidden").enter(legend10)
+                legend11.style("visibility", "hidden").enter(legend11)
+                legend12.style("visibility", "hidden").enter(legend12)
+                legend13.style("visibility", "hidden").enter(legend13)
+                legend14.style("visibility", "hidden").enter(legend14)
+                legend15.style("visibility", "hidden").enter(legend15)
+                legend16.style("visibility", "hidden").enter(legend16)
+                legend17.style("visibility", "hidden").enter(legend17)
+                legend18.style("visibility", "hidden").enter(legend18)
+                legend19.style("visibility", "hidden").enter(legend19)
+
+            })
+
+             d3.select("#education").on('click', function(d){
+                    simulation
+                .force('x', forceXSeperate_edu)
+                .alphaTarget(0.6)
+                .restart()
+                humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
+                non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
+                legend1.style("visibility", "hidden").enter(legend1)
+                legend2.style("visibility", "hidden").enter(legend2)
+                legend3.style("visibility", "hidden").enter(legend3)
+                legend4.style("visibility", "hidden").enter(legend4)
+                legend5.style("visibility", "hidden").enter(legend5)
+                legend6.style("visibility", "hidden").enter(legend6)
+                legend7.style("visibility", "hidden").enter(legend7)
+                legend8.style("visibility", "hidden").enter(legend8)
+                legend9.style("visibility", "hidden").enter(legend9)
+                legend10.style("visibility", "hidden").enter(legend10)
+                legend11.style("visibility", "hidden").enter(legend11)
+                legend12.style("visibility", "hidden").enter(legend12)
+                legend13.style("visibility", "hidden").enter(legend13)
+                legend14.style("visibility", "hidden").enter(legend14)
+                legend15.style("visibility", "hidden").enter(legend15)
+                legend16.style("visibility", "hidden").enter(legend16)
+                legend17.style("visibility", "hidden").enter(legend17)
+                legend18.style("visibility", "hidden").enter(legend18)
+                legend19.style("visibility", "hidden").enter(legend19)
+
+            })
+
+
         d3.select("#combine").on('click', function(){
             simulation
                 .force('x', forceXCombine)
