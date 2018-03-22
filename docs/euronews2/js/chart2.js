@@ -13,7 +13,7 @@
 
 
 
-
+//projects on the right
    var non_humanitarian_text = svg.append("text")
         .attr("class",'appearing_text')
         .attr('fill', 'black')
@@ -24,6 +24,54 @@
         .attr("font-family", "Arial")
         .attr("font-size", 23)
         .text("Non-Humanitarian Projects")
+
+    var Turkish_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr('visibility','hidden')
+        .attr("x", 600)
+        .attr("y", 95)
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Turkish Projects")
+
+    var education_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr('visibility','hidden')
+        .attr("x", 600)
+        .attr("y", 95)
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Educational Projects")
+
+
+// projects on the left
+
+    var Non_Turkish_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr("x", 150)
+        .attr("y", 95)
+        .attr('visibility', 'hidden')
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("International Projects")
+
+    var non_education_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr("x", 150)
+        .attr("y", 95)
+        .attr('visibility', 'hidden')
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Non-Educational Projects")
+
 
     var humanitarian_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -304,9 +352,9 @@ var forceXSeperate_tr = d3.forceX(function(d) {
 
 var forceXSeperate_edu = d3.forceX(function(d) {
     if(d.instrument === "education") {
-        return 250
-    } else {
         return 750
+    } else {
+        return 250
     }
     }).strength(0.03)
 
@@ -374,6 +422,10 @@ var stroke_color = function(d) {
                 .restart()
                 humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
                 non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
+                education_text.style("visibility", "hidden").enter(education_text)
+                non_education_text.style("visibility", "hidden").enter(non_education_text)
+                Turkish_text.style("visibility", "hidden").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "hidden").enter(Non_Turkish_text)
                 legend1.style("visibility", "hidden").enter(legend1)
                 legend2.style("visibility", "hidden").enter(legend2)
                 legend3.style("visibility", "hidden").enter(legend3)
@@ -402,8 +454,12 @@ var stroke_color = function(d) {
                 .force('x', forceXSeperate_tr)
                 .alphaTarget(0.6)
                 .restart()
-                humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
-                non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
+                education_text.style("visibility", "hidden").enter(education_text)
+                non_education_text.style("visibility", "hidden").enter(non_education_text)
+                Turkish_text.style("visibility", "visible").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "visible").enter(Non_Turkish_text)
+                humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
+                non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
                 legend1.style("visibility", "hidden").enter(legend1)
                 legend2.style("visibility", "hidden").enter(legend2)
                 legend3.style("visibility", "hidden").enter(legend3)
@@ -431,8 +487,12 @@ var stroke_color = function(d) {
                 .force('x', forceXSeperate_edu)
                 .alphaTarget(0.6)
                 .restart()
-                humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
-                non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
+                education_text.style("visibility", "visible").enter(education_text)
+                non_education_text.style("visibility", "visible").enter(non_education_text)
+                Turkish_text.style("visibility", "hidden").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "hidden").enter(Non_Turkish_text)
+                humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
+                non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
                 legend1.style("visibility", "hidden").enter(legend1)
                 legend2.style("visibility", "hidden").enter(legend2)
                 legend3.style("visibility", "hidden").enter(legend3)
@@ -463,6 +523,10 @@ var stroke_color = function(d) {
                 .restart()
                 humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
                 non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
+                education_text.style("visibility", "hidden").enter(education_text)
+                non_education_text.style("visibility", "hidden").enter(non_education_text)
+                Turkish_text.style("visibility", "hidden").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "hidden").enter(Non_Turkish_text)
                 legend1.style("visibility", "visible").enter(legend1)
                 legend2.style("visibility", "visible").enter(legend2)
                 legend3.style("visibility", "visible").enter(legend3)
