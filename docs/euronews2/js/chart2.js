@@ -91,7 +91,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Each Circle is a project funded by the EU on the ground.")
+        .text("Each Circle is a project funded by the EU on the ground")
         .style("font-weight", "normal")
 
   
@@ -102,7 +102,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Circles are sized based on euros paid.")
+        .text("Circles are sized based on euros paid")
         .style("font-weight", "normal")
 
 
@@ -113,7 +113,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("The bigger the circle the more funds paid.")
+        .text("The bigger the circle the more funds paid")
         .style("font-weight", "normal")
 
     var legend3 = svg.append("circle")
@@ -233,7 +233,7 @@
         var legend14 = svg.append("text")
                 .attr("x", 50)
                 .attr("y", 335)
-                .attr("font-family", "Bree Serif")
+                .attr("font-family", "Arial")
                 .attr("font-size",17)
                 .style("fill", "#17448A")
                 .text("International organizations")
@@ -245,13 +245,13 @@
         var legend15 = svg.append("circle")
                 .attr("r", 10)
                 .attr("cx", 30)
-                .attr("cy", 360)
+                .attr("cy", 365)
                 .style("fill", "#E53D32")
 
         var legend16 = svg.append("text")
                 .attr("x", 50)
-                .attr("y", 365)
-                .attr("font-family", "Bree Serif")
+                .attr("y", 370)
+                .attr("font-family", "Arial")
                 .attr("font-size",17)
                 .style("fill", "#E53D32")
                 .text("Turkish organizations")
@@ -269,7 +269,7 @@
         var legend21 = svg.append("text")
                 .attr("x", 50)
                 .attr("y", 405)
-                .attr("font-family", "Bree Serif")
+                .attr("font-family", "Arial")
                 .attr("font-size",17)
                 .style("fill", "grey")
                 .text("Non allocated projects")
