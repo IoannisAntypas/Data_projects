@@ -199,7 +199,7 @@
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
-                .text("More than 10 million euros")
+                .text("More than 20 million euros")
                 .style("font-weight", "normal")
 
 
@@ -616,7 +616,7 @@ var stroke_color = function(d) {
 
             element.style("stroke-width", 1.5)
             element.style('opacity', 0.6)
-            div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments +"/ contracted : " + d['Amount Contracted in €'] + " / Project Description: " + d.Description)
+            div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments +" / contracted : " + d['Amount Contracted in €'] + " / Project Description: " + d.Description)
             div.style("visibility", "visible")
             .style("left", (d3.event.pageX - 30) + "px")    
             .style("top", (d3.event.pageY - 35) + "px")
