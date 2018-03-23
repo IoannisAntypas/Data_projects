@@ -119,7 +119,7 @@
     var legend3 = svg.append("circle")
                 .attr("r", 50)
                 .attr("cx", 80)
-                .attr("cy", 210)
+                .attr("cy", 220)
                 .style("stroke", "#6c6c6c")
                 .style("fill-opacity", 0)
                 .style("stroke-width", 1.5)
@@ -129,7 +129,7 @@
         var legend4=svg.append("circle")
                 .attr("r", 30)
                 .attr("cx", 80)
-                .attr("cy", 230)
+                .attr("cy", 240)
                 .style("stroke", "#6c6c6c")
                 .style("fill-opacity", 0)
                 .style("stroke-width", 1.5)
@@ -140,7 +140,7 @@
         var legend5 = svg.append("circle")
                 .attr("r", 15)
                 .attr("cx", 80)
-                .attr("cy", 245)
+                .attr("cy", 255)
                 .style("stroke", "#6c6c6c")
                 .style("fill-opacity", 0)
                 .style("stroke-width", 1.5)
@@ -150,9 +150,9 @@
 
         var legend6 = svg.append("line")
                   .attr("x1", 85)
-                  .attr("y1", 100)
+                  .attr("y1", 110)
                   .attr("x2", 140)
-                  .attr("y2", 100)
+                  .attr("y2", 110)
                   .attr("stroke-width", 1)
                   .attr("transform", "translate(0, 57)")
                   .attr("stroke", "#6c6c6c")
@@ -162,9 +162,9 @@
 
          var legend7 = svg.append("line")
                   .attr("x1", 85)
-                  .attr("y1", 98)
+                  .attr("y1", 108)
                   .attr("x2", 140)
-                  .attr("y2", 98)
+                  .attr("y2", 108)
                   .attr("stroke-width", 1)
                   .attr("transform", "translate(0, 100)")
                   .attr("stroke", "#6c6c6c")
@@ -174,9 +174,9 @@
 
         var legend8 = svg.append("line")
                   .attr("x1", 85)
-                  .attr("y1", 98)
+                  .attr("y1", 108)
                   .attr("x2", 140)
-                  .attr("y2", 98)
+                  .attr("y2", 108)
                   .attr("stroke-width", 1)
                   .attr("transform", "translate(0, 130)")
                   .attr("stroke", "#6c6c6c")
@@ -185,7 +185,7 @@
 
         var legend9 = svg.append("text")
                 .attr("x", 140)
-                .attr("y", 162)
+                .attr("y", 172)
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
@@ -195,7 +195,7 @@
 
          var  legend10 = svg.append("text")
                 .attr("x", 140)
-                .attr("y", 205)
+                .attr("y", 215)
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
@@ -205,7 +205,7 @@
 
         var legend11 = svg.append("text")
                 .attr("x", 140)
-                .attr("y", 235)
+                .attr("y", 245)
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
@@ -223,7 +223,7 @@
                     .style("font-weight", "normal")
 
               // LEGEND COLOR
-              // Men 
+              // International 
         var legend13 = svg.append("circle")
                 .attr("r", 10)
                 .attr("cx", 30)
@@ -240,7 +240,7 @@
                 .style("font-weight", "normal")
 
 
-              // Women
+              // Turkish
 
         var legend15 = svg.append("circle")
                 .attr("r", 10)
@@ -257,10 +257,29 @@
                 .text("Turkish organizations")
                 .style("font-weight", "normal")
 
+// not applicable
+
+        var legend20 = svg.append("circle")
+                .attr("r", 10)
+                .attr("cx", 30)
+                .attr("cy", 400)
+                .style("fill", "grey")
+
+
+        var legend21 = svg.append("text")
+                .attr("x", 50)
+                .attr("y", 405)
+                .attr("font-family", "Bree Serif")
+                .attr("font-size",17)
+                .style("fill", "grey")
+                .text("Non allocated projects")
+                .style("font-weight", "normal")
+
+
          var legend17 =  svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 405)
+                    .attr("y", 435)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
@@ -270,7 +289,7 @@
         var legend18 =   svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 425)
+                    .attr("y", 455)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
@@ -324,8 +343,8 @@ var c = d3.scaleOrdinal()
 .range(['#E53D32','#17448A','grey']);
 
 var bubbleStroke = d3.scaleOrdinal()
-.domain(['turkey_flag1.png','eu_flag1.png'])
-.range(['#E57773','#2162C7']);
+.domain(['turkey_flag1.png','eu_flag1.png','none'])
+.range(['#E57773','#2162C7','lightgrey' ]);
 
 
 // note to self the simulation is a collection
@@ -357,7 +376,6 @@ var forceXSeperate_edu = d3.forceX(function(d) {
         return 250
     }
     }).strength(0.03)
-
 
 
 var forceXCombine = d3.forceX(750).strength(0.02)
@@ -445,6 +463,8 @@ var stroke_color = function(d) {
                 legend17.style("visibility", "hidden").enter(legend17)
                 legend18.style("visibility", "hidden").enter(legend18)
                 legend19.style("visibility", "hidden").enter(legend19)
+                legend20.style("visibility", "hidden").enter(legend20)
+                legend21.style("visibility", "hidden").enter(legend21)
 
    
         })
@@ -479,6 +499,8 @@ var stroke_color = function(d) {
                 legend17.style("visibility", "hidden").enter(legend17)
                 legend18.style("visibility", "hidden").enter(legend18)
                 legend19.style("visibility", "hidden").enter(legend19)
+                legend20.style("visibility", "hidden").enter(legend20)
+                legend21.style("visibility", "hidden").enter(legend21)
 
             })
 
@@ -512,6 +534,8 @@ var stroke_color = function(d) {
                 legend17.style("visibility", "hidden").enter(legend17)
                 legend18.style("visibility", "hidden").enter(legend18)
                 legend19.style("visibility", "hidden").enter(legend19)
+                legend20.style("visibility", "hidden").enter(legend20)
+                legend21.style("visibility", "hidden").enter(legend21)
 
             })
 
@@ -546,6 +570,8 @@ var stroke_color = function(d) {
                 legend17.style("visibility", "visible").enter(legend17)
                 legend18.style("visibility", "visible").enter(legend18)
                 legend19.style("visibility", "visible").enter(legend19)
+                legend20.style("visibility", "visible").enter(legend20)
+                legend21.style("visibility", "visible").enter(legend21)
 
         })   // d3.select("h1")
    //  .transition()
