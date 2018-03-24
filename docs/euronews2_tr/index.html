@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <title>Eu-Turkey breakdown</title>
+    <title>EU-Turkey breakdown</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom styling -->
@@ -53,6 +53,7 @@ hr {
     background-color: darkgrey;
     border-radius: 8px;
     font-size: 15px;
+    max-width: 360px;
     font-family: Arial;
    }
 
@@ -108,13 +109,17 @@ hr {
 
 </head>
 <body>
-    <h1> İki aşamada AB’nin Türkiye’ye yaptığı mülteci yardımı.</h1>
-    <h4> Proje çeşitlerine göre harcamaların nasıl ayrıldığını görmek için aşağıdaki seçeneklere tıklayınız.</h4>
+
+
+    <h1> Dört aşamada AB’nin Türkiye’ye yaptığı mülteci yardımı</h1>
+    <h4> Total, İnsancıl, ulusal ve eğitim harcamaları. Tüm bunlar bize ne anlatıyor?</h4>
     <hr></hr>
     <div id="splitter"></div>
 
     <button id="combine" class="text_hide">Tüm harcamalar</button>
-    <button id="type" class="text_reveal">İnsani yardım/İnsani yardım dışındakiler</button>
+    <button id="type" class="text_reveal">İnsani yardım harcamaları</button>
+    <button id="turkish" class="text_reveal">Uluslararası/Ulusal harcamalar</button>
+    <button id="education" class="text_reveal">Eğitim harcamaları</button>
     <!-- Bootstrap grid setup -->
     <div id="chart"></div>      
     <div id="legend"></div>

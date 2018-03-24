@@ -13,7 +13,7 @@
 
 
 
-
+//projects on the right
    var non_humanitarian_text = svg.append("text")
         .attr("class",'appearing_text')
         .attr('fill', 'black')
@@ -25,6 +25,54 @@
         .attr("font-size", 23)
         .text("İnsani yardım dışındakiler")
 
+    var Turkish_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr('visibility','hidden')
+        .attr("x", 600)
+        .attr("y", 95)
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Türkiye projeleri")
+
+    var education_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr('visibility','hidden')
+        .attr("x", 600)
+        .attr("y", 95)
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Eğitim harcamaları")
+
+
+// projects on the left
+
+    var Non_Turkish_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr("x", 150)
+        .attr("y", 95)
+        .attr('visibility', 'hidden')
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Uluslararası projeler")
+
+    var non_education_text = svg.append("text")
+        .attr("class",'appearing_text')
+        .attr('fill', 'black')
+        .attr('stroke','none')
+        .attr("x", 150)
+        .attr("y", 95)
+        .attr('visibility', 'hidden')
+        .attr("font-family", "Arial")
+        .attr("font-size", 23)
+        .text("Eğitim dışındaki projeler")
+
+
     var humanitarian_text = svg.append("text")
         .attr("class",'appearing_text')
         .attr('fill', 'black')
@@ -34,33 +82,44 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("İnsani yardım")
+        .text("İnsani yardım projeleri")
+
+   // var legend19 = svg.append("text")
+   //      .attr('class', 'explanatory_text')
+   //      .attr("x", 30)
+   //      .attr("y", 90)
+   //      .attr("font-family", "Arial")
+   //      .attr("font-size",17)
+   //      .style("fill", "Black")
+   //      .text("Each Circle is a project funded by the EU on the ground")
+   //      .style("font-weight", "normal")
+
   
    var legend1 = svg.append("text")
         .attr('class', 'explanatory_text')
         .attr("x", 30)
-        .attr("y", 95)
+        .attr("y", 113)
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Çizgili daireler ne kadar avro ödendiğine göre yapıldı.")
+        .text("Çizgili daireler ne kadar euro ödendiğine bakılarak yapıldı")
         .style("font-weight", "normal")
 
 
     var legend2 =   svg.append("text")
         .attr('class', 'explanatory_text')
         .attr("x", 30)
-        .attr("y", 115)
+        .attr("y", 138)
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Daire büyüdükçe ödenen fonlar da büyüyor..")
+        .text("Daire büyüdükçe ödenen fonlar da büyüyor")
         .style("font-weight", "normal")
 
     var legend3 = svg.append("circle")
                 .attr("r", 50)
                 .attr("cx", 80)
-                .attr("cy", 190)
+                .attr("cy", 220)
                 .style("stroke", "#6c6c6c")
                 .style("fill-opacity", 0)
                 .style("stroke-width", 1.5)
@@ -70,7 +129,7 @@
         var legend4=svg.append("circle")
                 .attr("r", 30)
                 .attr("cx", 80)
-                .attr("cy", 210)
+                .attr("cy", 240)
                 .style("stroke", "#6c6c6c")
                 .style("fill-opacity", 0)
                 .style("stroke-width", 1.5)
@@ -81,7 +140,7 @@
         var legend5 = svg.append("circle")
                 .attr("r", 15)
                 .attr("cx", 80)
-                .attr("cy", 225)
+                .attr("cy", 255)
                 .style("stroke", "#6c6c6c")
                 .style("fill-opacity", 0)
                 .style("stroke-width", 1.5)
@@ -91,9 +150,9 @@
 
         var legend6 = svg.append("line")
                   .attr("x1", 85)
-                  .attr("y1", 80)
+                  .attr("y1", 110)
                   .attr("x2", 140)
-                  .attr("y2", 80)
+                  .attr("y2", 110)
                   .attr("stroke-width", 1)
                   .attr("transform", "translate(0, 57)")
                   .attr("stroke", "#6c6c6c")
@@ -103,9 +162,9 @@
 
          var legend7 = svg.append("line")
                   .attr("x1", 85)
-                  .attr("y1", 78)
+                  .attr("y1", 108)
                   .attr("x2", 140)
-                  .attr("y2", 78)
+                  .attr("y2", 108)
                   .attr("stroke-width", 1)
                   .attr("transform", "translate(0, 100)")
                   .attr("stroke", "#6c6c6c")
@@ -115,9 +174,9 @@
 
         var legend8 = svg.append("line")
                   .attr("x1", 85)
-                  .attr("y1", 78)
+                  .attr("y1", 108)
                   .attr("x2", 140)
-                  .attr("y2", 78)
+                  .attr("y2", 108)
                   .attr("stroke-width", 1)
                   .attr("transform", "translate(0, 130)")
                   .attr("stroke", "#6c6c6c")
@@ -126,46 +185,47 @@
 
         var legend9 = svg.append("text")
                 .attr("x", 140)
-                .attr("y", 142)
+                .attr("y", 172)
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
-                .text("100 milyon avrodan fazla")
+                .text("100 milyon eurodan fazla")
                 .style("font-weight", "normal")
 
 
          var  legend10 = svg.append("text")
                 .attr("x", 140)
-                .attr("y", 185)
+                .attr("y", 215)
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
-                .text("20 milyon avrodan fazla")
+                .text("20 milyon eurodan fazla")
                 .style("font-weight", "normal")
 
 
         var legend11 = svg.append("text")
                 .attr("x", 140)
-                .attr("y", 215)
+                .attr("y", 245)
                 .attr("font-family", "Arial")
                 .attr("font-size",13)
                 .style("fill", "Black")
-                .text("10 milyon avrodan az")
+                .text("10 milyon eurodan az")
                 .style("font-weight", "normal")
 
         var legend12 =  svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 285)
+                    .attr("y", 305)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
-                    .text("Renkler kuruluşun ulusal ya da")
+                    .text("Renkler kuruluşun ulusal ya da ")
                     .style("font-weight", "normal")
-        var legend19 =  svg.append("text")
+
+                var legend19 =  svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 300)
+                    .attr("y", 320)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
@@ -174,58 +234,77 @@
 
 
               // LEGEND COLOR
-              // Men 
+              // International 
         var legend13 = svg.append("circle")
                 .attr("r", 10)
                 .attr("cx", 30)
-                .attr("cy", 330)
+                .attr("cy", 340)
                 .style("fill", "#17448A")
 
         var legend14 = svg.append("text")
                 .attr("x", 50)
-                .attr("y", 335)
-                .attr("font-family", "Bree Serif")
+                .attr("y", 345)
+                .attr("font-family", "Arial")
                 .attr("font-size",17)
                 .style("fill", "#17448A")
                 .text("Uluslararası örgütler")
                 .style("font-weight", "normal")
 
 
-              // Women
+              // Turkish
 
         var legend15 = svg.append("circle")
                 .attr("r", 10)
                 .attr("cx", 30)
-                .attr("cy", 360)
+                .attr("cy", 375)
                 .style("fill", "#E53D32")
 
         var legend16 = svg.append("text")
                 .attr("x", 50)
-                .attr("y", 365)
-                .attr("font-family", "Bree Serif")
+                .attr("y", 380)
+                .attr("font-family", "Arial")
                 .attr("font-size",17)
                 .style("fill", "#E53D32")
                 .text("Türk kuruluşlar")
                 .style("font-weight", "normal")
 
+// not applicable
+
+        var legend20 = svg.append("circle")
+                .attr("r", 10)
+                .attr("cx", 30)
+                .attr("cy", 410)
+                .style("fill", "grey")
+
+
+        var legend21 = svg.append("text")
+                .attr("x", 50)
+                .attr("y", 415)
+                .attr("font-family", "Arial")
+                .attr("font-size",17)
+                .style("fill", "grey")
+                .text("Non allocated projects")
+                .style("font-weight", "normal")
+
+
          var legend17 =  svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 405)
+                    .attr("y", 445)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
-                    .text("Kuruluşların isimlerini vefonlarını")
+                    .text("Kuruluşların isimlerini ve fonlarını görmek")
                     .style("font-weight", "normal")
 
         var legend18 =   svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 425)
+                    .attr("y", 465)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
-                    .text("görmek için dairelerin üzerinde gezinin")
+                    .text("için dairelerin üzerinde gezinin")
                     .style("font-weight", "normal")
 
 
@@ -271,12 +350,12 @@ defs.append("pattern")
 var radiusScale = d3.scaleSqrt().domain([15000,520000000]).range([10, 70])
 
 var c = d3.scaleOrdinal()
-.domain(['turkey_flag1.png','eu_flag1.png'])
-.range(['#E53D32','#17448A']);
+.domain(['turkey_flag1.png','eu_flag1.png','none'])
+.range(['#E53D32','#17448A','grey']);
 
 var bubbleStroke = d3.scaleOrdinal()
-.domain(['turkey_flag1.png','eu_flag1.png'])
-.range(['#E57773','#2162C7']);
+.domain(['turkey_flag1.png','eu_flag1.png','none'])
+.range(['#E57773','#2162C7','lightgrey' ]);
 
 
 // note to self the simulation is a collection
@@ -287,11 +366,28 @@ var bubbleStroke = d3.scaleOrdinal()
 
 var forceXSeperate = d3.forceX(function(d) {
     if(d.Humanitarian === "1") {
-        return 280
+        return 250
     } else {
         return 750
     }
     }).strength(0.03)
+
+var forceXSeperate_tr = d3.forceX(function(d) {
+    if(d.Turkish === "turkey_flag1.png") {
+        return 750
+    } else {
+        return 250
+    }
+    }).strength(0.03)
+
+var forceXSeperate_edu = d3.forceX(function(d) {
+    if(d.instrument === "education") {
+        return 750
+    } else {
+        return 250
+    }
+    }).strength(0.03)
+
 
 var forceXCombine = d3.forceX(750).strength(0.02)
 
@@ -355,6 +451,10 @@ var stroke_color = function(d) {
                 .restart()
                 humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
                 non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
+                education_text.style("visibility", "hidden").enter(education_text)
+                non_education_text.style("visibility", "hidden").enter(non_education_text)
+                Turkish_text.style("visibility", "hidden").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "hidden").enter(Non_Turkish_text)
                 legend1.style("visibility", "hidden").enter(legend1)
                 legend2.style("visibility", "hidden").enter(legend2)
                 legend3.style("visibility", "hidden").enter(legend3)
@@ -374,9 +474,83 @@ var stroke_color = function(d) {
                 legend17.style("visibility", "hidden").enter(legend17)
                 legend18.style("visibility", "hidden").enter(legend18)
                 legend19.style("visibility", "hidden").enter(legend19)
+                legend20.style("visibility", "hidden").enter(legend20)
+                legend21.style("visibility", "hidden").enter(legend21)
 
    
         })
+
+        d3.select("#turkish").on('click', function(d){
+            simulation
+                .force('x', forceXSeperate_tr)
+                .alphaTarget(0.6)
+                .restart()
+                education_text.style("visibility", "hidden").enter(education_text)
+                non_education_text.style("visibility", "hidden").enter(non_education_text)
+                Turkish_text.style("visibility", "visible").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "visible").enter(Non_Turkish_text)
+                humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
+                non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
+                legend1.style("visibility", "hidden").enter(legend1)
+                legend2.style("visibility", "hidden").enter(legend2)
+                legend3.style("visibility", "hidden").enter(legend3)
+                legend4.style("visibility", "hidden").enter(legend4)
+                legend5.style("visibility", "hidden").enter(legend5)
+                legend6.style("visibility", "hidden").enter(legend6)
+                legend7.style("visibility", "hidden").enter(legend7)
+                legend8.style("visibility", "hidden").enter(legend8)
+                legend9.style("visibility", "hidden").enter(legend9)
+                legend10.style("visibility", "hidden").enter(legend10)
+                legend11.style("visibility", "hidden").enter(legend11)
+                legend12.style("visibility", "hidden").enter(legend12)
+                legend13.style("visibility", "hidden").enter(legend13)
+                legend14.style("visibility", "hidden").enter(legend14)
+                legend15.style("visibility", "hidden").enter(legend15)
+                legend16.style("visibility", "hidden").enter(legend16)
+                legend17.style("visibility", "hidden").enter(legend17)
+                legend18.style("visibility", "hidden").enter(legend18)
+                legend19.style("visibility", "hidden").enter(legend19)
+                legend20.style("visibility", "hidden").enter(legend20)
+                legend21.style("visibility", "hidden").enter(legend21)
+
+            })
+
+             d3.select("#education").on('click', function(d){
+                    simulation
+                .force('x', forceXSeperate_edu)
+                .alphaTarget(0.6)
+                .restart()
+                education_text.style("visibility", "visible").enter(education_text)
+                non_education_text.style("visibility", "visible").enter(non_education_text)
+                Turkish_text.style("visibility", "hidden").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "hidden").enter(Non_Turkish_text)
+                humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
+                non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
+                legend1.style("visibility", "hidden").enter(legend1)
+                legend2.style("visibility", "hidden").enter(legend2)
+                legend3.style("visibility", "hidden").enter(legend3)
+                legend4.style("visibility", "hidden").enter(legend4)
+                legend5.style("visibility", "hidden").enter(legend5)
+                legend6.style("visibility", "hidden").enter(legend6)
+                legend7.style("visibility", "hidden").enter(legend7)
+                legend8.style("visibility", "hidden").enter(legend8)
+                legend9.style("visibility", "hidden").enter(legend9)
+                legend10.style("visibility", "hidden").enter(legend10)
+                legend11.style("visibility", "hidden").enter(legend11)
+                legend12.style("visibility", "hidden").enter(legend12)
+                legend13.style("visibility", "hidden").enter(legend13)
+                legend14.style("visibility", "hidden").enter(legend14)
+                legend15.style("visibility", "hidden").enter(legend15)
+                legend16.style("visibility", "hidden").enter(legend16)
+                legend17.style("visibility", "hidden").enter(legend17)
+                legend18.style("visibility", "hidden").enter(legend18)
+                legend19.style("visibility", "hidden").enter(legend19)
+                legend20.style("visibility", "hidden").enter(legend20)
+                legend21.style("visibility", "hidden").enter(legend21)
+
+            })
+
+
         d3.select("#combine").on('click', function(){
             simulation
                 .force('x', forceXCombine)
@@ -384,6 +558,10 @@ var stroke_color = function(d) {
                 .restart()
                 humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
                 non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
+                education_text.style("visibility", "hidden").enter(education_text)
+                non_education_text.style("visibility", "hidden").enter(non_education_text)
+                Turkish_text.style("visibility", "hidden").enter(Turkish_text)
+                Non_Turkish_text.style("visibility", "hidden").enter(Non_Turkish_text)
                 legend1.style("visibility", "visible").enter(legend1)
                 legend2.style("visibility", "visible").enter(legend2)
                 legend3.style("visibility", "visible").enter(legend3)
@@ -403,6 +581,8 @@ var stroke_color = function(d) {
                 legend17.style("visibility", "visible").enter(legend17)
                 legend18.style("visibility", "visible").enter(legend18)
                 legend19.style("visibility", "visible").enter(legend19)
+                legend20.style("visibility", "visible").enter(legend20)
+                legend21.style("visibility", "visible").enter(legend21)
 
         })   // d3.select("h1")
    //  .transition()
@@ -447,7 +627,7 @@ var stroke_color = function(d) {
 
             element.style("stroke-width", 1.5)
             element.style('opacity', 0.6)
-            div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments)
+            div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments +" / contracted : " + d['Amount Contracted in €'] + " / Project Description: " + d.Description)
             div.style("visibility", "visible")
             .style("left", (d3.event.pageX - 30) + "px")    
             .style("top", (d3.event.pageY - 35) + "px")
