@@ -409,7 +409,7 @@ var stroke_color = function(d) {
 
 
     d3.queue()
-        .defer(d3.csv, "data/turkish_vs_nonturkish.csv")
+        .defer(d3.csv, "data/turkish_vs_nonturkish1.csv")
         .await(ready)
 
     function ready (error, datapoints) {
