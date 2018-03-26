@@ -1,3 +1,4 @@
+
 (function() { 
 
 
@@ -23,7 +24,7 @@
         .attr("y", 95)
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("İnsani yardım dışındakiler")
+        .text("Non-Humanitarian Projects")
 
     var Turkish_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -34,7 +35,7 @@
         .attr("y", 95)
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Türkiye projeleri")
+        .text("Turkish Projects")
 
     var education_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -45,7 +46,7 @@
         .attr("y", 95)
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Eğitim harcamaları")
+        .text("Educational Projects")
 
 
 // projects on the left
@@ -59,7 +60,7 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Uluslararası projeler")
+        .text("International Projects")
 
     var non_education_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -70,7 +71,7 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Eğitim dışındaki projeler")
+        .text("Non-Educational Projects")
 
 
     var humanitarian_text = svg.append("text")
@@ -82,7 +83,7 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("İnsani yardım projeleri")
+        .text("Humanitarian Projects")
 
    // var legend19 = svg.append("text")
    //      .attr('class', 'explanatory_text')
@@ -219,18 +220,18 @@
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
-                    .text("Renkler kuruluşun ulusal ya da ")
+                    .text("Renkler kuruluşun ulusal ya da")
                     .style("font-weight", "normal")
 
-                var legend19 =  svg.append("text")
-                    .attr('class', 'explanatory_text')
-                    .attr("x", 30)
-                    .attr("y", 320)
-                    .attr("font-family", "Arial")
-                    .attr("font-size",17)
-                    .style("fill", "Black")
-                    .text("uluslararası olduğunu gösteriyor")
-                    .style("font-weight", "normal")
+        var legend19 =  svg.append("text")
+            .attr('class', 'explanatory_text')
+            .attr("x", 30)
+            .attr("y", 320)
+            .attr("font-family", "Arial")
+            .attr("font-size",17)
+            .style("fill", "Black")
+            .text("uluslararası olduğunu gösteriyor")
+            .style("font-weight", "normal")
 
 
               // LEGEND COLOR
@@ -283,7 +284,7 @@
                 .attr("font-family", "Arial")
                 .attr("font-size",17)
                 .style("fill", "grey")
-                .text("Non allocated projects")
+                .text("Müsait değil")
                 .style("font-weight", "normal")
 
 
@@ -300,7 +301,7 @@
         var legend18 =   svg.append("text")
                     .attr('class', 'explanatory_text')
                     .attr("x", 30)
-                    .attr("y", 465)
+                    .attr("y", 462)
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
@@ -627,7 +628,7 @@ var stroke_color = function(d) {
 
             element.style("stroke-width", 1.5)
             element.style('opacity', 0.6)
-            div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments +" / contracted : " + d['Amount Contracted in €'] + " / Project Description: " + d.Description)
+            div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments +" / euros contracted : " + d['Amount Contracted in €'])
             div.style("visibility", "visible")
             .style("left", (d3.event.pageX - 30) + "px")    
             .style("top", (d3.event.pageY - 35) + "px")
@@ -648,4 +649,3 @@ var stroke_color = function(d) {
 
 
 })();
-
