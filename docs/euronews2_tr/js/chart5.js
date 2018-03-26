@@ -24,7 +24,7 @@
         .attr("y", 95)
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Non-Humanitarian Projects")
+        .text("İnsani yardım dışındakiler")
 
     var Turkish_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -35,7 +35,7 @@
         .attr("y", 95)
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Turkish Projects")
+        .text("Türkiye projeleri")
 
     var education_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -46,7 +46,7 @@
         .attr("y", 95)
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Educational Projects")
+        .text("Eğitim harcamaları")
 
 
 // projects on the left
@@ -60,7 +60,7 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("International Projects")
+        .text("Uluslararası projeler")
 
     var non_education_text = svg.append("text")
         .attr("class",'appearing_text')
@@ -71,7 +71,7 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Non-Educational Projects")
+        .text("Eğitim dışındaki projeler")
 
 
     var humanitarian_text = svg.append("text")
@@ -83,7 +83,7 @@
         .attr('visibility', 'hidden')
         .attr("font-family", "Arial")
         .attr("font-size", 23)
-        .text("Humanitarian Projects")
+        .text("İnsani yardım projeleri")
 
    // var legend19 = svg.append("text")
    //      .attr('class', 'explanatory_text')
