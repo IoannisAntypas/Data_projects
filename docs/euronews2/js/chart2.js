@@ -619,8 +619,8 @@ var stroke_color = function(d) {
             element.style('opacity', 0.6)
             div.html("Applicant: "+ d.Applicant + " / " + "Euros paid: " + d.Payments +" / euros contracted : " + d['Amount Contracted in €'] + "/ Project: "+ d.Description)
             div.style("visibility", "visible")
-            .style("left", (d3.event.pageX - 70) + "px")    
-            .style("top", (d3.event.pageY - 75) + "px")
+            .style("left", (d3.event.pageX - 150) + "px")    
+            .style("top", (d3.event.pageY - 155) + "px")
               })
             .on("mouseout", function(d){
                 var element = d3.select(this)
