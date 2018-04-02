@@ -617,7 +617,7 @@ var stroke_color = function(d) {
 
             element.style("stroke-width", 1.5)
             element.style('opacity', 0.6)
-            div.html("Applicant: "+ d.Applicant + "</br>" + "Euros paid: " + d3.format(",.0f")(d.Payments) + "</br>" + " Euros contracted: " + d3.format(",.0f")(d['Amount Contracted in €']) +"</br>" + "Project: "+ d.Description)
+            div.html("Applicant: "+ d.Applicant + "</br>"  + " Euros contracted: " + d3.format(",.0f")(d['Amount Contracted in €']) +"</br>" + "Euros paid: " + d3.format(",.0f")(d.Payments) + "</br>" + "Project: "+ d.Description)
             div.style("visibility", "visible")
             .style("left", (d3.event.pageX - 180) + "px")    
             .style("top", (d3.event.pageY - 185) + "px")
