@@ -379,7 +379,7 @@ var forceXSeperate_edu = d3.forceX(function(d) {
     }).strength(0.03)
 
 
-var forceXCombine = d3.forceX(750).strength(0.02)
+var forceXCombine = d3.forceX(730).strength(0.03)
 
 
 var forceCollide =  d3.forceCollide(function(d) {
@@ -437,7 +437,8 @@ var stroke_color = function(d) {
         d3.select("#type").on('click', function(d){
             simulation
                 .force('x', forceXSeperate)
-                .alphaTarget(0.6)
+                .alphaTarget(0.4)
+                .alpha(0.7)
                 .restart()
                 humanitarian_text.style("visibility", "visible").enter(humanitarian_text)
                 non_humanitarian_text.style("visibility", "visible").enter(non_humanitarian_text)
@@ -473,7 +474,8 @@ var stroke_color = function(d) {
         d3.select("#turkish").on('click', function(d){
             simulation
                 .force('x', forceXSeperate_tr)
-                .alphaTarget(0.6)
+                .alphaTarget(0.4)
+                .alpha(0.7)
                 .restart()
                 education_text.style("visibility", "hidden").enter(education_text)
                 non_education_text.style("visibility", "hidden").enter(non_education_text)
@@ -508,7 +510,8 @@ var stroke_color = function(d) {
              d3.select("#education").on('click', function(d){
                     simulation
                 .force('x', forceXSeperate_edu)
-                .alphaTarget(0.6)
+                .alphaTarget(0.4)
+                .alpha(0.7)
                 .restart()
                 education_text.style("visibility", "visible").enter(education_text)
                 non_education_text.style("visibility", "visible").enter(non_education_text)
@@ -544,7 +547,8 @@ var stroke_color = function(d) {
         d3.select("#combine").on('click', function(){
             simulation
                 .force('x', forceXCombine)
-                .alphaTarget(0.1)
+                .alphaTarget(0.2)
+                .alpha(0.4)
                 .restart()
                 humanitarian_text.style("visibility", "hidden").enter(humanitarian_text)
                 non_humanitarian_text.style("visibility", "hidden").enter(non_humanitarian_text)
