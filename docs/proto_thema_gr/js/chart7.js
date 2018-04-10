@@ -91,7 +91,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Η κάθε φούσκα είναι ένα πρότζεκτ που χρηματοδοτεί η Ε.Ε.")
+        .text("Η κάθε φούσκα είναι ένα πρότζεκτ που χρηματοδοτείται από την Ε.Ε.")
         .style("font-weight", "normal")
  
   
@@ -306,7 +306,7 @@
                     .attr("font-family", "Arial")
                     .attr("font-size",17)
                     .style("fill", "Black")
-                    .text("Μετακινείστε τον κέρσορα σας σε κάθε φούσκα για να")
+                    .text("Μετακινήστε τον κέρσορα σας σε κάθε φούσκα για να")
                     .style("font-weight", "normal")
 
         var legend18 =   svg.append("text")
