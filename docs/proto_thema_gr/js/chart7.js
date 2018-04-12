@@ -91,7 +91,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Η κάθε φούσκα είναι ένα πρότζεκτ που χρηματοδοτείται από την Ε.Ε.")
+        .text("Ο κάθε κύκλος είναι ένα πρότζεκτ που χρηματοδοτείται από την Ε.Ε.")
         .style("font-weight", "normal")
  
   
@@ -102,7 +102,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Το μέγεθος της φούσκας αντανακλά το ύψος χρηματοδότησης")
+        .text("Το μέγεθος του κύκλου αντανακλά το ύψος χρηματοδότησης")
         .style("font-weight", "normal")
 
     // var legend22 = svg.append("text")
