@@ -124,7 +124,7 @@
         .attr("font-family", "Arial")
         .attr("font-size",17)
         .style("fill", "Black")
-        .text("Όσο πιό μεγάλη, τόσο περισσότερα κεφάλαια")
+        .text("Όσο πιό μεγάλος, τόσο περισσότερα κεφάλαια")
         .style("font-weight", "normal")
 
     var legend3 = svg.append("circle")
@@ -649,7 +649,7 @@ var stroke_color = function(d) {
             element.style('opacity', 0.6)
             div.html("<strong>Οργανισμός: </strong>"+ d.Applicant + "</br>"  + "<strong>Ύψος συμβάσεων σε Ευρώ: </strong>" + d3.format(",.0f")(d['Amount Contracted in €']) +"</br>" + "<strong>Πληρωμές σε Ευρώ ως τώρα: </strong>" + d3.format(",.0f")(d.Payments) + "</br>" + "<strong>Περιγραφή πρότζεκτ: </strong>"+ d.Description)
             div.style("visibility", "visible")
-            .style("left", (d3.event.pageX - 240) + "px")    
+            .style("left", (d3.event.pageX - 150) + "px")    
             .style("top", (d3.event.pageY - 245) + "px")
               })
             .on("mouseout", function(d){
