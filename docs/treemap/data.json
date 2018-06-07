@@ -8,8 +8,11 @@
     [{
 
     "name":"European Macro-Financial Assistance",
+    "name1":"European Macro-Financial Assistance",
+
     "size": 3410,
-    "link": "https://bit.ly/2hrkhQV"
+    "link": "https://bit.ly/2hrkhQV",
+    "description" : "Loans, of which €2.81 billion was provided. This is the largest amount of macro-financial assistance that the EU has disbursed to any non-EU country. "
     }]
   },
 
@@ -19,8 +22,10 @@
     [{
     
     "name":"European Investment Bank",
+    "name1":"European Investment Bank",
     "size": 5602,
-    "link": "https://bit.ly/2ikfmkF"
+    "link": "https://bit.ly/2ikfmkF",
+    "description" : "Loans by the EIB between 2014-2016. Support infrastructure development and reforming the transport,  energy,  agriculture, education and municipal sectors. Substantial financial and technical support for SME development. "
     }]
   },
 
@@ -29,8 +34,10 @@
     "children": [{
 
     "name": "European Bank for Reconstruction and Development",
+    "name1": "European Bank for Reconstruction and Development",
     "size": 3749,
-    "link": "https://bit.ly/2LVgMxD"
+    "link": "https://bit.ly/2LVgMxD",
+    "description" : "Investment from 2014-2017, from the EU, to develop and reform, the banking sector, agribusiness, transport, small businesses in UKR.  Facilitated the purchase of $300 million of gas for the 2015-2016 heating season."
     }]
   },
 
@@ -39,8 +46,10 @@
     "children": [{
 
     "name": "European Neighbourhood Instrument grants",
+    "name1": "European Neighbourhood Instrument grants",
     "size": 965,
-    "link": "https://bit.ly/2Ln11yr"
+    "link": "https://bit.ly/2Ln11yr",
+    "description" : "Instrument Grants, include a €355 million state building contract to fight against corruption and reform the public administration, the judiciary, the constitution and the electoral framework."
     }]
   },
 
@@ -48,9 +57,12 @@
   {"name": "project5",
     "children": [{
   
-    "name": "Instrument contributing to Stability and Peace",
+    "name": " ",
+    "name1": "Instrument contributing to Stability and Peace",
     "size": 85,
-    "link": "https://bit.ly/2HiwXkS"
+    "link": "https://bit.ly/2HiwXkS",
+    "description" : "From 2014 on, to observe and build confidence and support the OSCE Special Monitoring Mission, Internally Displaced Persons, conflict-affected populations, restoration of governance and reconciliation in crisis-affected communities as well as  police reform."
+
     }]
   }]
 }
