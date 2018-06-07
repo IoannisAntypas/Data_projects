@@ -1,0 +1,29 @@
+{
+ "name": "flare",
+
+ "children": [
+  {
+    "name":"EU macro-financial assistance (MFA)",
+    "size": 3410,
+    "link": "https://bit.ly/2hrkhQV"
+  },
+  {
+    "name":"European Investment Bank",
+    "size": 5602,
+    "link": "https://bit.ly/2ikfmkF"
+  },
+  {
+    "name": "European Bank for Reconstruction and Development",
+    "size": 3749,
+    "link": "https://bit.ly/2LVgMxD"
+  },
+  {
+    "name": "European Neighbourhood Instrument grants",
+    "size": 965,
+    "link": "https://bit.ly/2Ln11yr"
+  },
+  {
+    "name": "Instrument contributing to Stability and Peace",
+    "size": 85,
+    "link": "https://bit.ly/2HiwXkS"
+  }
