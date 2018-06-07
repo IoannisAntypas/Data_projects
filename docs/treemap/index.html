@@ -128,11 +128,13 @@ h1{
             .attr("width", function(d) { return d.x1 - d.x0; })
             .attr("height", function(d) { return d.y1 - d.y0; })
             .attr("fill", function(d) { return color(d.parent.data.id); })
-            .attr('opacity', 0.9)
+            .attr('opacity', 1)
             .on('mousemove', function(d) {
                     tooltip.style('display', 'block')
-                    tooltip.style('top', (d3.event.pageY + 10) + 'px')
-                    tooltip.style('left', (d3.event.pageX - 230) + 'px')
+                    tooltip.style('top', (d3.event.pageY - 190) + 'px')
+                    tooltip.style('left', (d3.event.pageX - 240) + 'px')
+                    d3.selectAll("rect").style("opacity", 0.3)
+                    d3.select(this).style("opacity", 1)
                     d3.select('.tooltip #heading')
                         .text(d.data.name1)
                         d3.select('.tooltip #heading2')
@@ -153,9 +155,10 @@ h1{
             //     console.log()
 
             // })
-            .on('mouseout', function() {                             
+            .on('mouseout', function() {  
+                d3.selectAll("rect").style("opacity", 1)           
                 tooltip.style('display', 'none')
-                .style('opacity', 0.9);                            
+                .style('opacity', 1);                            
               })
 
 

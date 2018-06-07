@@ -1,61 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
-  position: relative;
-  width: 960px;
-}
-
-.bar {
-  fill: steelblue;
-}
-
-/*.axis path {
-  display: none;
-}
-
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.axis--y .tick {
-  display: none;
-} */
-
-.group-label {
-  fill: #555;
-}
-
-.group .label {
-  fill: #fff
-}
-
-form {
-  position: relative;
-  right: 10px;
-  top: 10px;
-}
-</style>
-<body>
-
-<h1> Imports and exports of Ukraine to the European Union </h1>
-<h4> Ukrainian trade with the EU on the rise in 2017, the year DCFTA was signed. Click to split imports and exports </h4>
-<hr></hr>
-<form>
-  <label><input type="radio" name="mode" value="multiples"> Split</label>
-  <label><input type="radio" name="mode" value="stacked" checked> Combined</label>
-</form>
-
-<div id="stackedbars">
-  <svg id="stacked" width="960" height="500"></svg></div>
-</body>
-<script src="//d3js.org/d3.v4.min.js"></script>
-<script>
-
 var svg = d3.select("#stacked"),
     margin = {top: 10, right: 60, bottom: 20, left: 60},
     width = +svg.attr("width") - margin.left - margin.right,
@@ -218,6 +160,3 @@ d3.csv("data_bars.csv", function(error, data) {
     }
 });
 
-</script>
-</body>
-</html>
