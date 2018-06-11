@@ -115,13 +115,17 @@ h1{
         var cell = svg.selectAll("g")
             .data(root.leaves())
             .enter().append("g")
-                .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+                .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+
 
         // Add rectanges for each of the boxes that were generated
         trees = cell.append('a')
-            .attr("xlink:href", function(d){
-                return d.data.link
-            })
+            // .attr("xlink:href", function(d){
+            //     return d.data.link
+            // })
+            .on("click",function(d){
+                window.open(d.data.link)})
+
             .append("rect")
             .classed("inSVGB", true)
             .attr("id", function(d) {  return d.data.id; })
