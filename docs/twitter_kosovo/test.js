@@ -159,7 +159,7 @@ var simulation = d3.forceSimulation()
 
             element.style("stroke-width", 1.5)
             element.style('opacity', 0.6)
-            div.html("Author: "+ d.Author + "</br>"  + " Twitter Followers: " + d3.format(",.0f")(d['Twitter Followers']) +"</br>" + "Twitter Retweets: " + d3.format(",.0f")(d['Twitter Retweets']) + "</br>" + "Impressions: "+ d3.format(",.0f")(d.Impressions) + "</br>" + "Impact: "+ d3.format(",.0f")(d.Impact))
+            div.html("Author: "+ d.Author + "</br>"  + " Twitter Followers: " + d3.format(",.0f")(d['Twitter Followers']) + "</br>" + "Impressions: "+ d3.format(",.0f")(d.Impressions) + "</br>" + "Impact: "+ d3.format(",.0f")(d.Impact))
             div.style("visibility", "visible")
             .style("left", (d3.event.pageX - 180) + "px")    
             .style("top", (d3.event.pageY - 185) + "px")
