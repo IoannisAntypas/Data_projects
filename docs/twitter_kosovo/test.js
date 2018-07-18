@@ -119,11 +119,17 @@ var simulation = d3.forceSimulation()
     });
 
 
-      var circles = svg.selectAll(".Applicant")
+
+      var g = svg.selectAll(".Applicant")
         .data(datapoints)
-        .enter().append('circle')
+        .enter().append('g')        
         .attr('class', 'Applicant')
+          
+
+
+      g.append('circle')
         .style('opacity', 1)
+        .attr('class','circle')
         .attr('r', function(d) {
             return radiusScale(d['Twitter Followers']);
         })
@@ -134,19 +140,41 @@ var simulation = d3.forceSimulation()
         .style("stroke-width", 1.5)
                 .on("click",function(d){
                   window.open(d.Url)})
-        simulation.nodes(datapoints)
-          .on('tick', ticked)
-      
+
+         simulation.nodes(datapoints)
+         .on('tick', ticked)
+
+    g.append("text")
+         .attr('class','texts')
+         .text(function(d) { return d.Author; })
+        .style("font-size", function(d) { return Math.min(2 * radiusScale(d['Twitter Followers']), (2 * radiusScale(d['Twitter Followers']) - 8) / this.getComputedTextLength() * 15) + "px"; })
+        .attr("dy", ".35em")
+        .style('text-anchor', 'middle')
+        .style('fill','white')
+        .style('font-weight','thin')
+        .style('stroke-width','0.1')
+
+
+
       function ticked() {
-        circles
+        g.selectAll('.circle')
             .attr('cx', (d) =>{
                 return d.x
             })
             .attr('cy', (d) =>{
                 return d.y
             })
+        g.selectAll('.texts')
+            .attr('x', (d) =>{
+                return d.x
+            })
+            .attr('y', (d) =>{
+                return d.y
+            })
 
-        circles.on("mouseover", function(d){
+
+
+        g.on("mouseover", function(d){
 
             div.transition()
             .duration(200)
@@ -159,7 +187,7 @@ var simulation = d3.forceSimulation()
 
             element.style("stroke-width", 1.5)
             element.style('opacity', 0.6)
-            div.html("Author: "+ d.Author + "</br>"  + " Twitter Followers: " + d3.format(",.0f")(d['Twitter Followers']) + "</br>" + "Impressions: "+ d3.format(",.0f")(d.Impressions) + "</br>" + "Impact: "+ d3.format(",.0f")(d.Impact))
+            div.html("Author: "+ d.Author + "</br>"  + " Twitter Followers: " + d3.format(",.0f")(d['Twitter Followers']) +"</br>" + "Impressions: "+ d3.format(",.0f")(d.Impressions) + "</br>" + "Impact: "+ d3.format(",.0f")(d.Impact))
             div.style("visibility", "visible")
             .style("left", (d3.event.pageX - 180) + "px")    
             .style("top", (d3.event.pageY - 185) + "px")
@@ -168,11 +196,25 @@ var simulation = d3.forceSimulation()
                 var element = d3.select(this)
                 element.style("stroke", stroke_color)
                 element.style('opacity', 1)
+                d3.selectAll('.texts')
+                    .style('stroke','white')
+                    .style('stroke-width','0.1')
                 div.style("visibility", "hidden")
-
               })
 
+        
+
           }
+
+      // function tocked() {
+      //   g.selectAll('.texts')
+      //       .attr('x', (d) =>{
+      //           return d.x
+      //       })
+      //       .attr('y', (d) =>{
+      //           return d.y
+      //       })}
+
 
 }
 
