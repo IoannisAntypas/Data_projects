@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Treemap</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1> Hover to explore which EU instruments support reforms in Ukraine, or click to read more</h1>
+
+    <div class="container">
+        <div class="row">
+        </div>
+        <div id="chart">
+            <div class='tooltip'>  
+            <p><strong id="heading"></strong>
+            <p><strong id="heading2"></strong>
+            </p><p><span id="text"></span></div>
+
+            <!-- <svg width="960" height="570"></svg> -->
+<!--             <div id="tooltip"></div>
+ -->        </div>
+    </div>
+<style>
+
+.tooltip {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  padding: 10px;
+  display: none;
+  background-color: white;
+  text-align: left;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+    margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.inSVGB {
+  cursor: pointer;
+}
+
+h1{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left:20px;
+    padding-bottom :50px;
+    text-align: center;
+
+
+  }
+
+/*#tooltip p {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}*/
+</style>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+    var width = '700',
+        height = '428'
+
+    var svg = d3.select("#chart")
+        .append('svg')
+        .attr('height', height)
+        .attr('width',width)
+        width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+        var tooltip = d3.select('.tooltip')
+
+
+// dark red ['#ffa258', '#df0054','#a02a63','#4b125c','#ff8b6a']
+        color = d3.scaleOrdinal()
+            .domain(["project2","project3","project1","project4","project5"])
+            .range(['#283149', '#404b69','#00818a','#8aae92','#616161'])
+        format = d3.format(",d");
+
+    var treemap = d3.treemap()
+        .tile(d3.treemapResquarify)
+        .size([width, height])
+        .round(true)
+        .paddingInner(1);
+
+    // var tool = d3.select("body").append("div").attr("class", "tooltip");
+
+
+    d3.json("data.json", function(error, data) {
+        if (error) throw error;
+ // Since we are dealing with hierarchical data, need to convert the data to the right format
+        var root = d3.hierarchy(data)
+            .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+            .sum(sumBySize)
+            .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+        // Computes x0, x1, y0, and y1 for each node (where the rectangles should be)
+        treemap(root);
+
+        var cell = svg.selectAll("g")
+            .data(root.leaves())
+            .enter().append("g")
+                .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; })
+
+
+        // Add rectanges for each of the boxes that were generated
+        trees = cell.append('a')
+            // .attr("xlink:href", function(d){
+            //     return d.data.link
+            // })
+            .on("click",function(d){
+                window.open(d.data.link)})
+
+            .append("rect")
+            .classed("inSVGB", true)
+            .attr("id", function(d) {  return d.data.id; })
+            .attr("width", function(d) { return d.x1 - d.x0; })
+            .attr("height", function(d) { return d.y1 - d.y0; })
+            .attr("fill", function(d) { return color(d.parent.data.id); })
+            .attr('opacity', 1)
+            .on('mousemove', function(d) {
+                    tooltip.style('display', 'block')
+                    tooltip.style('top', (d3.event.pageY - 190) + 'px')
+                    tooltip.style('left', (d3.event.pageX - 240) + 'px')
+                    d3.selectAll("rect").style("opacity", 0.3)
+                    d3.select(this).style("opacity", 1)
+                    d3.select('.tooltip #heading')
+                        .text(d.data.name1)
+                        d3.select('.tooltip #heading2')
+                        .text("€ " + d.data.size +" mil.")
+                    d3.select('.tooltip #text')
+                        .text(d.data.description)
+
+                    // var element = d3.select(this)
+                    //     element
+                    //     .style('opacity', 0.6)
+                    })
+
+            // .on('mouseover', function(d) {
+            //     tooltip.style('display', 'block');
+            //     tooltip.style('top', (d3.event.pageY + 10) + 'px')
+            //     tooltip.style('left', (d3.event.pageX + 10) + 'px');
+            //     tooltip.html("SADASD")
+            //     console.log()
+
+            // })
+            .on('mouseout', function() {  
+                d3.selectAll("rect").style("opacity", 1)           
+                tooltip.style('display', 'none')
+                .style('opacity', 1);                            
+              })
+
+
+
+
+            // .on("mouseover", function(d) {
+            //     var element = d3.select(this)
+            //     element
+            //     .style("opacity", 0.5)
+            //     .style("stroke",'light-grey')
+            //     tool
+            //     .style("left", d3.event.pageX + 10 + "px")
+            //     .style("top", d3.event.pageY - 20 + "px")
+            //     .style("display", "inline-block")
+            //     .html( "sdadasdad" );
+
+            // })
+            //  .on("mouseout", function(){
+            //     var element = d3.select(this)
+            //     element
+            //     .style("opacity", 0.8)
+            //     tool
+            //     .style("display", "none")})
+
+
+
+
+
+        // Make sure that text labels don't overflow into adjacent boxes
+        cell.append("clipPath")
+          .attr("id", function(d) { return "clip-" + d.data.id; })
+          .append("use")
+              .attr("xlink:href", function(d) { return "#" + d.data.id; });
+
+        // Add text labels - each word goes on its own line
+
+
+        cell.append("text")
+          .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+          .selectAll("tspan")
+          .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g)} )
+          .enter().append("tspan")
+            .attr("x", 5)
+            .attr("y", function(d, i) { return 23 + i * 20; })
+            .style('fill', 'white')
+            .text(function(d) { return (d);})
+            .attr('font-size', 20)
+            .style('pointer-events','none');
+
+        // cell.append("text")
+        //     // .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+        //   .selectAll("tspan")
+        //   .data(root.leaves())
+        //   .enter().append("tspan")
+        //     .attr("x", 5)
+        //     .attr("y", height /4)
+        //     .style('fill', 'white')
+        //     .text("balls")
+        //     .attr('font-size', 20)
+        //     .style('pointer-events','none');
+
+
+//function(d) { return d.data.name.split(/(?=[A-Z][A-Z][^A-Z])/g)
+
+        // Simple way to make tooltips !!!
+        // cell.append("title")
+        //     .text(function(d) { return d.value + "\n" + format(d.value) ; });
+
+        // Add an input to select between different summing methods
+        // d3.selectAll("input")
+        //     .data([sumBySize, sumByCount], function(d) { return d ? d.name : this.value; });
+
+
+    });
+
+    // Return the number of descendants that the node has
+    function sumByCount(d) {
+        return d.children ? 0 : 1;
+    }
+
+    // Return the size of the node
+    function sumBySize(d) {
+        return d.size;
+    }
+
+
+    function fader() {
+        d3.select(this)
+            .style("opacity", 0.5)}
+
+</script>
+
+</body>

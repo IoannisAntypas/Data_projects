@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>EU-Turkey breakdown</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+/*        * {font-family: "Arial"}
+*/        /*svg {background: #f1f1f1;}*/
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-left:20px;
+    max-width: 770px;
+    padding: 0;
+}
+
+    button {
+      position:relative;
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 13px;
+      top:0px;
+      right:-20px;
+      border: 1px solid #e0e0e0;
+      text-decoration: none;
+      fill:gray;
+      background-color: lightgray;
+
+    }
+
+    button.active {
+      background: #000;
+      color: #fff;
+    }
+
+    .Applicant:hover {
+        border: 'black'
+        border-radius:15px;}
+
+    #tooltip {
+    position: absolute;
+    text-align: left;
+    color: white;
+    padding: 7px;
+    background-color: darkgrey;
+    border-radius: 8px;
+    font-size: 15px;
+    max-width: 360px;
+    font-family: Arial;
+   }
+
+    #tooltip.hidden {
+      display: none;
+    }
+
+    #tooltip p {
+      margin: 0;
+      font-family: Arial;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .image-border {
+  fill: transparent;
+  stroke: transparent;
+  shape-rendering: crispEdges;
+}
+.image-border:hover {
+  stroke: black;
+}
+
+#chart{
+/*    max-width : 650px;
+    max-height: 600px;
+*/}
+    #legend {
+        max-width : 350px;
+        max-height: 600px;
+          z-index: 2;
+
+}
+
+    h1{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left:20px;
+
+  }
+      h4{
+    font-family: Arial;
+    font-weight: bold;
+    margin-left:20px;
+
+  }
+#splitter{
+}
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+    <h1> Dört aşamada AB’nin Türkiye’ye yaptığı mülteci yardımı</h1>
+    <h4> Total, İnsancıl, ulusal ve eğitim harcamaları. Tüm bunlar bize ne anlatıyor?</h4>
+    <hr></hr>
+    <div id="splitter"></div>
+
+    <button id="combine" class="text_hide">Tüm harcamalar</button>
+    <button id="type" class="text_reveal">İnsani yardım harcamaları</button>
+    <button id="turkish" class="text_reveal">Uluslararası/Ulusal harcamalar</button>
+    <button id="education" class="text_reveal">Eğitim harcamaları</button>
+    <!-- Bootstrap grid setup -->
+    <div id="chart"></div>      
+    <div id="legend"></div>
+  <div id="tooltip" class="hidden">
+    <p><strong>Applicant and amount</strong></p>
+    <p><span id="value">100</span></p>
+  </div>
+
+<!-- External JS libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<!-- Custom JS -->
+<script src="js/chart5.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

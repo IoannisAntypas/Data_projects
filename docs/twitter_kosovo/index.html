@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Twitter Kosovo User Breakdown</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+/*        * {font-family: "Arial"}
+*/        /*svg {background: #f1f1f1;}*/
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-left:20px;
+    max-width: 770px;
+    padding: 0;
+}
+
+    button {
+      position:relative;
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 13px;
+      top:0px;
+      right:-20px;
+      border: 1px solid #e0e0e0;
+      text-decoration: none;
+      fill:gray;
+      background-color: lightgray;
+
+    }
+
+    button.active {
+      background: #000;
+      color: #fff;
+    }
+
+    .Applicant:hover {
+        border: 'black'
+        border-radius:15px;}
+
+    #tooltip {
+    position: absolute;
+    text-align: left;
+    color: white;
+    padding: 7px;
+    background-color: darkgrey;
+    border-radius: 8px;
+    font-size: 15px;
+    max-width: 360px;
+    font-family: Arial;
+   }
+
+    #tooltip.hidden {
+      display: none;
+    }
+
+    #tooltip p {
+      margin: 0;
+      font-family: Arial;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .image-border {
+  fill: transparent;
+  stroke: transparent;
+  shape-rendering: crispEdges;
+}
+.image-border:hover {
+  stroke: black;
+}
+
+    #legend {
+        max-width : 350px;
+        max-height: 600px;
+          z-index: 2;
+
+}
+
+    h1{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left:20px;
+
+  }
+      h4{
+    font-family: Arial;
+    font-weight: bold;
+    margin-left:20px;
+
+  }
+
+    </style>
+
+
+</head>
+<body>
+    <h1> Who are behind the top 100 retweeted tweets that mention Kosovo for the month of May?</h1>
+    <h4></h4>
+    <h4>Circles are split by the author's audience reach, then sized on their total twitter followers. </h4>
+    <h4>Hover for more info on the author or click to see the tweet</h4>
+
+        <hr></hr>
+
+<div id="chart"></div>      
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<!-- Custom JS -->
+<script src="test.js"></script>
+
+</body>
+</html>
+

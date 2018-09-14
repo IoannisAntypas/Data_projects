@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis--y .tick {
+  display: none;
+}
+
+.group-label {
+  fill: #555;
+}
+
+.series .label {
+  fill: #fff
+}
+</style>
+<body>
+
+<div id="stackedbars">
+  <svg id="stacked" width="960" height="500"></svg></div>
+</body>
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+
+var svg = d3.select("#stacked"),
+    margin = {top: 10, right: 60, bottom: 20, left: 60},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g")
+      .attr('class', 'group')
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var x = d3.scaleBand()
+    .rangeRound([0, width])
+    .padding(0.3);
+
+// var y1 = d3.scaleBand()
+//     .rangeRound([height, 0])
+//     .padding(.2);
+var y2 = d3.scaleLinear();
+
+var z = d3.scaleOrdinal(d3.schemeCategory20);
+
+var stack = d3.stack()
+
+//d3.csv("segments_table2.csv", type, function(error, data) {
+d3.tsv("data.tsv", function(error, data) {
+  if (error) throw error;
+  // d3.csv("segments_table2.csv", type, function(error, data2) {
+  //   console.log(data2);
+  //   console.log(stack.keys(data.columns.slice(1))(data2));
+  // });
+  console.log(data)
+  var nest = d3.nest()
+    .key(function(d) { return d.date; });
+  console.log(nest.entries(data));
+
+  // reshape data
+  // obtain unique dates
+  var dates = d3.nest()
+      .key(function(d) { return d.date; })
+      .entries(data)
+      .map(function(d) { return d.key; });
+
+  // obtain unique groups
+  var groups = d3.nest()
+      .key(function(d) { return d.group; })
+      .entries(data)
+      .map(function(d) { return d.key; });
+
+  var groupedData = dates.map(function(d) {
+    var currentItem = {
+      date:  d
+    };
+    groups.forEach(function(group) {
+      var currentGroupItem = data.filter(function(f) {
+        //if (f.Group== Group&& f.date == d) console.log(f);
+        return f.group == group && f.date == d;
+      });
+      if (currentGroupItem.length) {
+        currentItem['Group' + group] = +currentGroupItem[0].value;
+      } else {
+        currentItem['Group' + group] = 0;
+      }
+    })
+    return currentItem;
+  });
+  groupedData.map(function(d) {
+    d.total = d['Group1'] + d['Group2'] + d['Group3'] + d['Group4'];
+  })
+  console.log(groupedData);
+
+  var keys = ['Group1', 'Group2', 'Group3', 'Group4']
+  stack.keys(keys);
+  stackedData = stack(groupedData);
+  console.log(stackedData);
+
+  x.domain(groupedData.map(function(d) { return d.date; }));
+  // y1.domain(['Group1', 'Group2', 'Group3', 'Group4']);
+  y2.domain([0, d3.max(groupedData, function(d) { return d.total; })])
+    .range([height, 0])
+  z.domain(['Group1', 'Group2', 'Group3', 'Group4']);
+
+  var series = g.selectAll(".series")
+    .data(stackedData)
+    .enter().append("g")
+      .attr("class", function(d) { return "series " + d.key; })
+      .attr("fill", function(d) { return z(d.key); })
+
+  var group= series.selectAll("rect")
+    .data(function(d) { return d; })
+    .enter()
+
+  group.append("rect")
+    .attr("x", function(d) { console.log('d', d); return x(d.data.date); })
+    .attr("y", function(d) { return y2(d[1]); })
+    .attr("height", function(d) { return y2(d[0]) - y2(d[1]); })
+    .attr("width", x.bandwidth());
+
+  count = 0
+  group.append('text')
+    .attr('class', 'label')
+    .attr("x", function(d) { return x(d.data.date) + 5})
+    .attr("y", function(d) { return y2(d[0]); })
+    .attr("dy", "-.3em")
+    .text(function(d, i) {
+      var g = d3.select(this).node().parentNode.classList[1];
+      return d.data[g];
+    });
+
+  series.selectAll('.group-label')
+    .data(stackedData)
+    .enter()
+    .append("text")
+    .attr("class", "group-label")
+    .attr("x", -40)
+    .attr("y", function(d) { return y2( (d[0][0] + d[0][1]) / 2); })
+    .attr("dy", ".35em")
+    .text(function(d) { return d.key; });
+
+  g.append("g")
+      .attr("class", "axis axis--x")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  g.append("g")
+      .attr("class", "axis axis--y")
+      .call(d3.axisLeft(y2))
+});
+
+function type(d, i, columns) {
+  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+  d.total = t;
+  return d;
+}
+</script>
+</body>
+</html>

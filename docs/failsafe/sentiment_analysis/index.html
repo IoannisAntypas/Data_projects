@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+  <title>Eurogroup Sentiment Analysis.</title>
+
+<style>
+.container {
+  text-align: center;
+  color: #333;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  font-family: Helvetica, sans-serif;
+  position: relative;
+
+}
+#nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: left;
+  width: 100%;
+}
+h1 {
+  font-size: 35px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 28px;
+  color: #D3D3D3;
+}
+p {
+  font-size: 17px;
+  font-weight: lighter;
+  line-height: 1.8;
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+li {
+  font-size: 24px;
+  line-height: 1.8;
+}
+a {
+  text-decoration: none;
+  background: #bdffc5;
+  padding: 3px 6px;
+  color: #000;
+}
+#my_header {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 5%;
+  font-size: 31px;
+  color: black;
+  font-weight: bolder;
+}
+#my_subheader {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: lighter;
+  font-size: 22px;
+  color: #989898;
+}
+#my_another_subheader {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  font-weight: bold;
+  font-size: 22px;
+  color: #black;
+}
+#my_image_caption {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0%;
+  font-weight: lighter;
+  font-size: 12px;
+  color: #808080;
+}
+
+#my_other_image_caption {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 1%;
+  margin-bottom: 7%;
+  font-weight: lighter;
+  font-size: 12px;
+  color: #808080;
+}
+
+#my_footer {
+  text-align: left;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 0%;
+  font-weight: lighter;
+  font-size: 16px;
+  background: #E9E9EA;
+  padding: 3px 6px;
+  color: #000;
+}
+</style>
+
+</head>
+
+<body>
+<div class="container">
+      <div id="nav">
+        <a href="https://ioannisantypas.github.io/Data_projects/">Home</a>
+        <a href="https://ioannisantypas.github.io/Data_projects//contact">Contact</a>
+        <a href="https://ioannisantypas.github.io/Data_projects/about">About</a>
+      </div>
+
+<div>
+<img width="82%" height="20%" src="eurozone.jpg" alt="">
+</div>
+
+<div id="my_image_caption">
+<i>Source: flickr/ EU Council Eurozone</i>
+</div>
+
+<div id="my_header">Apparently the Eurogroup is not the most sentimental place.</div>
+
+
+<div id="my_subheader">
+We measure just how much emotion is shown by the heads of the Eurozone when it comes to crisis-striken Greece.</div>
+<div id="my_other_image_caption">
+<i>Data analysis and text by Ioannis Antypas, November 2017</i>
+</div>
+
+<p>The Eurogroup is the primary economic decision making body of the Eurozone. Over the years it has gained the reputation of being the body capable of reaching compromise in Europe's most pressing Economic issues. Each month (and occasionally multiple times per month) the finance ministers of the 19 Eurozone member states meet to discuss and tackle the economic issues of the Euro.</p>
+
+<p>WThe Greek drama peaked in 2015, when the new leftist SYRIZA government took over, promosing debt relief and the immediate end of any program commitments. </p>
+
+<p>The first six months of 2015 tested the unity and effectiveness of the Eurogroup in in striking compromise, resulting in a third bailout package for Greece. During that time all of Europe was holding its breath as the future of Greece in the Euro and the Eurozone's future itself hang in the balance.</p>
+
+<p>But just how rattled were the three main players of the Eurogroup, and how did their sentiments change after the third Greek program was signed? We performed sentiment analysis on the post Eurogroup press conference speeches of Dijsselbloem, Moscovici and Regling to find out.</p>
+
+<div>
+<img width="75%" src="DijsselbloemArtboard 1@4x-8.png" alt="" />
+</div>
+
+
+
+      <div id="my_another_subheader">
+        But what is sentiment analysis?
+      </div>
+
+<p>Sentiment analysis (sometimes known as opinion mining or emotion AI) refers to the use of natural language processing, text analysis, computational linguistics, and biometrics to systematically identify, extract, quantify, and study affective states and subjective information. Sentiment analysis is widely applied to voice of the customer materials such as reviews and survey responses, online and social media, and healthcare materials for applications that range from marketing to customer service to clinical medicine.</p>
+
+
+<p>Generally speaking, sentiment analysis aims to determine the attitude of a speaker, writer, or other subject with respect to some topic or the overall contextual polarity or emotional reaction to a document, interaction, or event. The attitude may be a judgment or evaluation, affective state (that is to say, the emotional state of the author or speaker), or the intended emotional communication (that is to say, the emotional effect intended by the author or interlocutor).</p>
+
+
+
+<!-- <img width="52%" height="20%" src="slope1.png" alt="" /> -->
+<div>
+<img width="50%" height ="70%" src="MoscoviciArtboard 1@4x-8.png" alt="" />
+</div>
+
+      <div id="my_another_subheader">
+        So where are the feelings?
+      </div>
+
+<p>Well, there are not that many. And that is what is interesting. The rhetoric of all three key stakeholders has remained collected and unsentimetal, following similar levels during the peak of the Greek crisis in June 2015 and in the post reconciliation period in 2017.</p>
+
+<div>
+<img width="50%" height ="70%"  src="ReglingArtboard 1@4x-8.png" alt="" />
+</div>
+
+      <div id="my_another_subheader">
+        Can we make any assumptions?
+      </div>
+
+
+<p>The Greek crisis and its negotiations was a high stakes game. Perhaps the greatest high stake game Greece has played in the past two decades. The position of the country in the Eurozone, as well as a future of even heavier unemployment and hardship lay ahead hang by a thread.</p>
+
+
+<p>On the other side, the Eurozone was also risking a domino effect, facing a real possibility of other economically weaker countries also defaulting and plunging the Eurozone in yet another crisis.</p>
+
+
+<p>The cool and collected image presented by its members contrasts the fiery rhetoric shown by foreign politicians in a time of crisis, such as Donald Trump or Philippine President Rodrigo Duterte.</p>
+
+<p>The EU has a number of battles ahead of it. Brexit, immigration, the human rights situation of Eastern Europe. No matter what happens behind closed doors, the Eurozone has proved that it can present a calm, unsentimental image in the face of crisis.</p>
+
+      <div id="my_another_subheader">
+        Limitations?
+      </div>
+
+<p>Sentiment analysis, is not perfect. It has a long way ahead of it. It does however serve as a means of investigation and research. The Washington Post has relied on it to analyse the sentiments shown by President Trump in the past. However, in our case it measure neither what happend when the doors closed and the Eurogroup discussions begun in earnest, nor the underlying messages sent by slight nuanses by each politician.</p
+
+
+<div id="my_footer">After finding all Greek related speeches by each poltician, we used sklearn in conjuction with Python to tokenize and analyse their text. The TfidfVectorizer broke down each text and assigned scores in each word, resulting in an oversal sentiment score for each speech. We then visualized it using matplotlib and adobe illustrator.</div>
+<!-- 
+<p>To determine the size and scope of lobbying from each country, we calculated the sum of persons involved in each organization registered in the transparency register. We then isolated those organizations which list finance in their interests and measured them for each country.</p>
+ -->
+
