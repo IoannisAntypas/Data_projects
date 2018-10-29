@@ -57,6 +57,108 @@
       .force('y', d3.forceY(height/2 +100).strength(0.05))
       .force('collide',forceCollide)
 
+// Text part
+
+      svg.append("circle")
+                .attr("r", 45)
+                .attr("cx", 80)
+                .attr("cy", 220)
+                .style("stroke", "#6c6c6c")
+                .style("fill-opacity", 0)
+                .style("stroke-width", 1.5)
+                .style("stroke-dasharray", ("3,3"))
+                .style("opacity", 0.5)
+
+      svg.append("circle")
+                .attr("r", 20)
+                .attr("cx", 80)
+                .attr("cy", 245)
+                .style("stroke", "#6c6c6c")
+                .style("fill-opacity", 0)
+                .style("stroke-width", 1.5)
+                .style("stroke-dasharray", ("3,3"))
+                .style("opacity", 0.5)
+
+
+      svg.append("circle")
+                .attr("r", 5)
+                .attr("cx", 80)
+                .attr("cy", 260)
+                .style("stroke", "#6c6c6c")
+                .style("fill-opacity", 0)
+                .style("stroke-width", 1.5)
+                .style("stroke-dasharray", ("3,3"))
+                .style("opacity", 0.5)
+
+
+      svg.append("line")
+                  .attr("x1", 85)
+                  .attr("y1", 118)
+                  .attr("x2", 140)
+                  .attr("y2", 118)
+                  .attr("stroke-width", 1)
+                  .attr("transform", "translate(0, 57)")
+                  .attr("stroke", "#6c6c6c")
+                  .style("stroke-dasharray", ("3,3"))
+                  .style("opacity", 0.5)
+
+
+      svg.append("line")
+                  .attr("x1", 85)
+                  .attr("y1", 125)
+                  .attr("x2", 140)
+                  .attr("y2", 125)
+                  .attr("stroke-width", 1)
+                  .attr("transform", "translate(0, 100)")
+                  .attr("stroke", "#6c6c6c")
+                  .style("stroke-dasharray", ("3,3"))
+                  .style("opacity", 0.5)
+
+
+      svg.append("line")
+                  .attr("x1", 85)
+                  .attr("y1", 126)
+                  .attr("x2", 140)
+                  .attr("y2", 126)
+                  .attr("stroke-width", 1)
+                  .attr("transform", "translate(0, 130)")
+                  .attr("stroke", "#6c6c6c")
+                  .style("stroke-dasharray", ("3,3"))
+                  .style("opacity", 0.5)
+
+      svg.append("text")
+                .attr("x", 140)
+                .attr("y", 178)
+                .attr("font-family", "Arial")
+                .attr("font-size",13)
+                .style("fill", "Black")
+                .text("More than 100 million euros")
+                .style("font-weight", "normal")
+
+
+      svg.append("text")
+                .attr("x", 140)
+                .attr("y", 228)
+                .attr("font-family", "Arial")
+                .attr("font-size",13)
+                .style("fill", "Black")
+                .text("More than 20 million euros")
+                .style("font-weight", "normal")
+
+
+      svg.append("text")
+                .attr("x", 140)
+                .attr("y", 259)
+                .attr("font-family", "Arial")
+                .attr("font-size",13)
+                .style("fill", "Black")
+                .text("Less than 10 million euros")
+                .style("font-weight", "normal")
+
+
+// text part end
+
+
       d3.queue()
         .defer(d3.csv, 'finance.csv')
         .await(ready)
