@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Testy-test</title>
+<link rel='stylesheet' href="css/style.css">
+
+<svg width="960" height="960"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+	// creates the svg element and positions it
+var svg = d3.select("svg"),
+    margin = 100,
+    diameter = +svg.attr("width"),
+    g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+// var color = d3.scaleSequential([8, 0], d3.interpolateMagma);
+    // coloring that uses interpolation
+var color = d3.scaleOrdinal()
+    .domain([-1, 6])
+    .range(["#333",'#dedfde', "#334242", '#335252','#336161','white']);
+    // .interpolate(d3.interpolateHcl);
+
+// var color_leaf = d3.scaleOrdinal()
+// 	.range(['purple','blue','orange','yellow','teal','black'])
+
+    // pack is a hierarchy d3 framework conditional to root
+var pack = d3.pack()
+    .size([diameter - margin , diameter - margin])
+    .padding(2);
+
+
+
+
+// load in the data
+d3.json("data/result.json", function(error, root) {
+  if (error) throw error;
+
+  	// the parent hierarchy framework
+    root = d3.hierarchy(root) // root is our data!
+      .sum(function(d) { return d.size; })
+      .sort(function(a, b) { return b.value - a.value; });
+
+    // focus again is related to the hierarchy framework
+	var focus = root,
+	    nodes = pack(root).descendants(), // this is what creates our data
+	    view;
+
+  // var tooltip = d3.select('body')
+  //   .append('div')
+  //   .attr('class',"label-small")
+  //   .style('position','absolute')
+  //   .style('z-index','10')
+  //   .style('visibility','hidden')
+
+
+	// enter the circles
+	var circle = g.selectAll("circle")
+		.data(nodes)
+		.enter().append("circle")
+			.attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+			.style("fill", function(d) { return d.children ? color(d.depth) : d.data.fill; })
+			.on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); })
+      // .on("mouseover", function(d){return tooltip.text(d.data.name).style("visibility", "visible");})
+      // .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+      // .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+
+      // .on('mouseover', function(){console.log('asdasda')});
+
+// test.on('mouseover', function() {
+// 	console.log('asd')
+// })
+// console.log(test)	
+
+// console.log(leaves)
+
+	// gonna comment out text for now, too dangerous
+	var text = g.selectAll("text")
+		.data(nodes)
+		.enter().append("text")
+			.attr("class", d => d.value > 25 ? 'label' : 'label-small label')
+			.style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
+			.style("visibility", d => d.value <= 55 ? "hidden" : "visible")
+			.style("display", function(d) { return d.parent === root ? "inline" : "none"; })
+
+
+			.on('mouseover', d =>  d3.select(this).style('fill','red') )
+			.text(function(d) { return d.data.name +' '+ d.value})
+
+
+
+
+  var node = g.selectAll("circle,text")
+  	// .attr('fill','black');
+  // events for clicking etc
+
+// node.on('mouseover', d => d3.select(this).attr('visibility','visible'))
+
+  svg
+      .style("background", color(-1))
+      .on("click", function() { zoom(root); });
+
+     zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+  function zoom(d) {
+    var focus0 = focus; focus = d;
+
+    var transition = d3.transition()
+        .duration(d3.event.altKey ? 7500 : 750)
+        .tween("zoom", function(d) {
+          var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+          return function(t) { zoomTo(i(t)); };
+        });
+
+    transition.selectAll("text")
+      .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+        .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+  }
+
+  function zoomTo(v) {
+    var k = diameter / v[2]; view = v;
+    node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
+    circle.attr("r", function(d) { return d.r * k; });
+
+  // function hovered(hover) {
+  //   return function(d) {
+  //   d3.selectAll(d.ancestors().map(function(d) {}));
+  //   }};
+
+  }
+});
+
+</script>
+
+
+
