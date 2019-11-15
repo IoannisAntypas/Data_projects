@@ -67,9 +67,9 @@ d3.json("data/result.json", function(error, root) {
 	var text = g.selectAll("text")
 		.data(nodes)
 		.enter().append("text")
-			.attr("class", d => d.value > 55 ? 'label' : 'label-small label')
+			.attr("class", d => d.value > 105 ? 'label' : 'label-small label')
 			.style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-			.style("visibility", d => d.value <= 55 ? "hidden" : "visible")
+			.style("visibility", d => d.value <= 105 ? "hidden" : "visible")
 			.style("display", function(d) { return d.parent === root ? "inline" : "none"; })
 			.text(function(d) { return d.data.name +' - '+ d.value})
 
