@@ -21,13 +21,24 @@
   stroke-width: 1.5px;
 
 }
+.focused{
+
+}
+.tip{
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  /*font-weight: bold;*/
+  color:white;
+  text-shadow: 2px 2px 6px #000000;
+
+}
 
 .label {
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-anchor: middle;
-  font-weight: bold;
+  /*font-weight: bold;*/
   fill:white;
-  text-shadow: 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .label-small {
@@ -35,10 +46,17 @@
 	font-weight: normal;
 }
 
-.label,
+
+/*.label,
 .node--root,
 .node--leaf {
   pointer-events: none;
+}*/
+
+.node--leaf:hover~.node--root,
+ {
+  display: block
 }
+
 
 </style>
